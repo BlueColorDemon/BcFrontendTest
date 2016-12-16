@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+		<script type="application/javascript">
+			//线性递归函数（斐波那契数列）：
+
+			function f(n) {
+				if(n <= 1) {
+					return 1
+				};
+
+				return f(n - 1) + f(n - 2);
+			}
+
+			f(10); // 89
+
+			//尾递归：
+
+			function f(n, ac1 = 1, ac2 = 1) {
+				if(n <= 1) {
+					return ac2
+				};
+
+				return f(n - 1, ac2, ac1 + ac2);
+			}
+
+			f(10) // 89
+
+			/*这是怎么转化得来的？？
+			
+			我现在的感觉是
+			A过程：无法直接通过线性递归代码转换成尾递归，直观表现就是，没法在看到线性递归代码第一眼就能够不经思考的按照一定的格式转换成尾递归 
+			
+			我更倾向的是一个这样的过程：
+			B过程：线性递归==>原理剖析==>代码重构==>尾递归
+			
+			所以，我感到疑惑的是：如果线性递归转换为尾递归的过程如B过程，上述改造后的尾递归函数怎么得来的（实际就是看不懂那个尾递归函数要体现的功能...汗！）？求释疑。如果如A过程，求通用的线性递归转换为尾递归的套路*/
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
