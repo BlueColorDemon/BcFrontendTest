@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/underscore.js"></script>
+    <script src="../Scripts/backbone.js"></script>
+</head>
+<body>
+    <div id='sidebar'>hello</div>
+    <script type="application/javascript">
+        var Sidebar = Backbone.Model.extend({
+            promptColor: function() {
+                var cssColor = prompt("请输入CSS颜色：");
+                this.set({
+                    color: cssColor
+                });
+            }
+        });
+
+        window.sidebar = new Sidebar;
+
+        sidebar.on('change:color', function(model, color) {
+            $('#sidebar').css({
+                background: color
+            })
+        });
+
+        sidebar.set({
+            color: 'white'
+        });
+
+        sidebar.promptColor();
+
+    </script>
+</body>
+</html>

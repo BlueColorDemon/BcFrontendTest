@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+		<script type="application/javascript">
+			var fullname = 'Jone Deo';
+			var obj = {
+				fullname: 'Colin Ihrig',
+				prop: {
+					fullname: 'Aurelio De Rosa',
+					getFullname: function() {
+						return this.fullname;
+					}
+				}
+			};
+			console.log(obj.prop.getFullname());
+			var test = obj.prop.getFullname;
+			console.log(test());
+			
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
