@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base\01_JavaScript简介\01第一个JavaScript程序.html" />
+    <Content Include="Base\01_JavaScript简介\timestamp.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,6 +87,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\02_JavaScript语法基础\" />
+    <Folder Include="Base\03_JavaScript流程控制\" />
+    <Folder Include="Base\04_JavaScript函数\" />
+    <Folder Include="Base\05_面向对象编程\" />
+    <Folder Include="Base\06_JavaScript事件\" />
+    <Folder Include="Base\07_JavaScript DOM\" />
+    <Folder Include="Base\08_JavaScript BOM\" />
+    <Folder Include="Base\09_正则表达式\" />
+    <Folder Include="Base\10_AJAX\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

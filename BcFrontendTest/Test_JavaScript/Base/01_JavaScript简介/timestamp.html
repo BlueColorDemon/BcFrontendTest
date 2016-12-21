@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="application/javascript">
+			//			var bcDate = function(paramDate) {
+			//				var value = new Date(paramDate || new Date);
+			//				return r(value.getMonth() + 1) + "-" + r(value.getDate()) + " " + r(value.getHours()) + ":" + r(value.getMinutes())
+			//			};
+			//
+			//			var r = function(data) {
+			//				return data < 10 ? "0" + (0 | data) : data
+			//			};
+			//
+			//			var temp = bcDate();
+			//			console.log(temp);
+
+			//			var a = {};
+			//			var b = 56;
+			//			//window.abcdefg为一个不存在的对象,  
+			//			console.log(window.abcdefg && null); //undefined  
+			//			console.log(null && window.abcdefg); //null  
+			//			console.log(a && null); //null  
+			//			console.log(window.abcdefg && a); //undefined  
+			//			console.log(a && b); //56  
+			//			console.log(b && a); //object {}  
+
+			//			var oDate1 = new Date(2015, 8, 1, 0, 0, 0);
+			//			var oDate2 = new Date(2015, 10, 1, 0, 0, 0);
+			//			var nTime = oDate2.getTime() - oDate1.getTime();
+			//			var day = Math.floor(nTime / 86400);
+			//			var hour = Math.floor(nTime % 86400 / 3600);
+			//			var minute = Math.floor(nTime % 86400 % 3600 / 60);
+
+			var a = 'abcdefg' ["split"];
+			console.log(a); //返回一个Function.
+			
+			var a = 'abcdefg' ["split"]('');
+			console.log(a); //返回一个数组:[ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]
+			
+			var a = 'abcdefg' ["split"]('')["reverse"]()["join"]('');
+			console.log(a); //输出字符串：“gfedcba”
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
