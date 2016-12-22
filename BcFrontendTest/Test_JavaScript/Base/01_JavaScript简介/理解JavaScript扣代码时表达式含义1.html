@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>理解【 && (表达式AA,表达式BB,表达式CCC),表达式DD】即&& (,),</title>
+		<script type="application/javascript">
+			//理解【 && (表达式AA,表达式BB,表达式CCC),表达式DD】
+			//&& (,),
+			var arr = [1, 2, 3, 4, 5, 6];
+			var g = 0;
+			for(var i = 0; i < arr.length; i++) {
+				arr[i] < 4 &&
+					(console.log('AA:' + arr[i]), console.log('BB:' + arr[i]), console.log('CC:' + g++)), console.log('DD:' + (new Date).getTime());
+			}
+			//明白了（时间分割线的原理）：
+			//如果大于1分钟，就插入系统时间（12-22 10:00）并插入消息
+			//如果小于1分钟，就直接插入消息
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

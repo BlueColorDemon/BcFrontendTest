@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="Base\01_JavaScript简介\01第一个JavaScript程序.html" />
     <Content Include="Base\01_JavaScript简介\timestamp.html" />
+    <Content Include="Base\01_JavaScript简介\理解JavaScript扣代码时表达式含义1.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
