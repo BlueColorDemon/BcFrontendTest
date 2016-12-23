@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_JavaScript", "Test_Jav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_jQuery", "Test_jQuery\Test_jQuery.csproj", "{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DingDing", "Test_DingDing\Test_DingDing.csproj", "{F4791269-7B78-4CD6-9E9B-087A6296DD83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4791269-7B78-4CD6-9E9B-087A6296DD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4791269-7B78-4CD6-9E9B-087A6296DD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4791269-7B78-4CD6-9E9B-087A6296DD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4791269-7B78-4CD6-9E9B-087A6296DD83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

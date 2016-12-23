@@ -1,0 +1,249 @@
+{
+    "p_id": "lxt",
+    "p_name": "来小兔",
+    "type": 1,
+    "icon": "lxt.png",
+    "emotions": [
+        {
+            "p_id": "lxt",
+            "e_id": 1,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJgzg3Bw",
+            "b_mediaid": "@lALOBJhFXcz6zPo",
+            "f_size": 13038
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 2,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJgsS3Bw",
+            "b_mediaid": "@lALOBJgpFMz6zPo",
+            "f_size": 16506
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 3,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJhFXnBw",
+            "b_mediaid": "@lALOBJg6eMz6zNI",
+            "f_size": 13116
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 4,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJgsVHBw",
+            "b_mediaid": "@lALOBJgsVcz6zNI",
+            "f_size": 12224
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 5,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhJH3Bw",
+            "b_mediaid": "@lALOBJg6fMz6zPo",
+            "f_size": 16592
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 6,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJgzjHBw",
+            "b_mediaid": "@lALOBJg6fcz6zNI",
+            "f_size": 13715
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 7,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhJInBw",
+            "b_mediaid": "@lALOBJg6f8z6zPo",
+            "f_size": 18092
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 8,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhB0XBw",
+            "b_mediaid": "@lALOBJg6gMz6zPo",
+            "f_size": 17112
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 9,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJg2vHBw",
+            "b_mediaid": "@lALOBJg2vsz6zPo",
+            "f_size": 17979
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 10,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJg2wHBw",
+            "b_mediaid": "@lALOBJhFaMz6zPo",
+            "f_size": 14324
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 11,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhJLXBw",
+            "b_mediaid": "@lALOBJgzmMz6zPo",
+            "f_size": 15059
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 12,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJgpKHBw",
+            "b_mediaid": "@lALOBJgzmcz6zPo",
+            "f_size": 15900
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 13,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJg6kHBw",
+            "b_mediaid": "@lALOBJgv48z6zNI",
+            "f_size": 15255
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 14,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhB4HBw",
+            "b_mediaid": "@lALOBJg6kcz6zPo",
+            "f_size": 13900
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 15,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJgznXBw",
+            "b_mediaid": "@lALOBJgsg8z6zNI",
+            "f_size": 14105
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 16,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJg-znBw",
+            "b_mediaid": "@lALOBJg2ysz6zPo",
+            "f_size": 15879
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 17,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJg2zHBw",
+            "b_mediaid": "@lALOBJgzosz6zNI",
+            "f_size": 12266
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 18,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJhJOnBw",
+            "b_mediaid": "@lALOBJg6lMz6zPo",
+            "f_size": 13101
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 19,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJgsjHBw",
+            "b_mediaid": "@lALOBJgsjcz6zPo",
+            "f_size": 13284
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 20,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJg6lXBw",
+            "b_mediaid": "@lALOBJhFhsz6zPo",
+            "f_size": 13455
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 21,
+            "e_name": "",
+            "width": 250,
+            "height": 250,
+            "s_mediaid": "@lALOBJg21HBw",
+            "b_mediaid": "@lALOBJgv-8z6zPo",
+            "f_size": 15251
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 22,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJhFiXBw",
+            "b_mediaid": "@lALOBJhFi8z6zNI",
+            "f_size": 12557
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 23,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJhB9HBw",
+            "b_mediaid": "@lALOBJgslMz6zNI",
+            "f_size": 11829
+        },
+        {
+            "p_id": "lxt",
+            "e_id": 24,
+            "e_name": "",
+            "width": 210,
+            "height": 250,
+            "s_mediaid": "@lALOBJgv_3Bw",
+            "b_mediaid": "@lALOBJhJScz6zNI",
+            "f_size": 12693
+        }
+    ],
+    "icon_mediaid": "@lALOBJgzgmBg"
+}

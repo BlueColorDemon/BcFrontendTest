@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+    <title>钉钉视频会议</title>
+    <meta name="description" content="钉钉网页版，提供windows版和Mac版，支持winxp、win7、win8、vista和iOS操作系统，手机端、Pad、PC端等信息多端同步，工作沟通更高效。">
+    <meta name="keywords" content="钉钉网页版，钉钉WEB版，dingding web，dingding pc，钉钉PC版，钉钉电脑">
+    <link rel="stylesheet" href="./assets/app/stylesheets/voip.css" />
+    <link rel="icon" id="favicon" href="https://g.alicdn.com/dingding/web/0.2.6/img/oldIcon.ico" type="image/x-icon" />
+    <script>
+        window.version = '3.2.2';
+    </script>
+</head>
+
+<body class="body is-app" >
+<div id="layout-container" ng-cloak ui-view></div>
+<!--插件-->
+
+<script>
+    if(window.navigator.userAgent.indexOf('Mac') > -1){
+        document.body.className = document.body.className + ' mac-os';
+    }else{
+        document.body.className = document.body.className + ' windows-os';
+    }
+</script>
+<script src="./assets/app/js/index-global.js"></script>
+<script src="./assets/app/js/dingtalk-windows-glue.js"></script>
+<script src="./assets/app/js/windowEntrys/VoIPEntry.js"></script>
+</body>
+</html>

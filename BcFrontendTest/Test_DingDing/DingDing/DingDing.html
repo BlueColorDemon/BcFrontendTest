@@ -1,0 +1,1399 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0024)https://im.dingtalk.com/ -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @charset "UTF-8";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <meta name="renderer" content="webkit">
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+    <script>
+        var isSSL = (window.location.protocol === 'https:');
+        var ua = window.navigator.userAgent;
+        var isApp = /nw/.test(ua);
+        if (isApp) {
+            var version = '2.14.2'; // 老版本桌面端先强制使用 2.14.2
+            var groupName = 'dingding';
+        } else {
+            var version = '3.3.1';
+            var groupName = 'DingTalkWeb';
+        }
+        var forceMatch = /forceversion=([\d\.]+)/.exec(window.location.href);
+        if (forceMatch && forceMatch[1]) {
+            version = forceMatch[1];
+        }
+        if (isSSL) {
+            var staticHost = 'g.alicdn.com';
+        } else {
+            var staticHost = 'g.alicdn.daily.taobao.net'
+        }
+        if (window.location.href.indexOf('env=beta') > 0) {
+            var staticHost = 'g-assets.daily.taobao.net';
+        }
+        var bodyClass = '';
+        if (!isApp && window.location.search.indexOf('mode=fullscreen') > 0) {
+            bodyClass += ' is-app';
+        }
+        if (isApp) {
+            bodyClass += ' is-app';
+            if (ua.indexOf('Mac OS X') !== -1) {
+                bodyClass += ' mac-os';
+            } else {
+                bodyClass += ' windows-os';
+            }
+        }
+        window.dingtalkWindowName = "main";
+    </script>
+    <script src="./DingDing_files/modernizr-2.6.2.min.js"></script>
+    <title>钉钉</title>
+    <meta name="description" content="钉钉网页版，提供windows版和Mac版，支持winxp、win7、win8、vista和iOS操作系统，手机端、Pad、PC端等信息多端同步，工作沟通更高效。">
+    <meta name="keywords" content="钉钉网页版，钉钉WEB版，dingding web，dingding pc，钉钉PC版，钉钉电脑">
+    <script>
+        document.write('<lin' + 'k rel="stylesheet" href="//' + staticHost + '/' + groupName + '/web/' + version + '/app/stylesheets/app.css">')
+    </script>
+    <link rel="stylesheet" href="./DingDing_files/app.css">
+    <link rel="icon" id="favicon" href="https://g.alicdn.com/DingTalkWeb/web/3.3.1/app/img/icons/oldIcon.ico" type="image/x-icon">
+    <script>
+        document.write('<bo' + 'dy class="bo' + 'dy' + bodyClass + '" prevent-drag dd-copy dd-click-url>')
+    </script>
+    <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;1.9.1&quot;,&quot;jQuery.hotkeys&quot;:&quot;0.8&quot;,&quot;Modernizr&quot;:&quot;2.6.2&quot;,&quot;Angular&quot;:&quot;1.5.10&quot;}">
+    <script type="text/javascript" src="chrome-extension://fhhdlnnepfjhlhilgmeepgkhjmhhhjkh/js/detector.js"></script>
+</head>
+<body class="body font-size-level-NaN" prevent-drag="" dd-copy="" dd-click-url="">
+    <div id="cdn-error-bar" class="kie-bar cdn-error">
+        啊哦，钉钉暂时无法访问，请下载最新的钉钉继续使用。
+        <a target="_blank" href="http://www.dingtalk.com/mac/d/?spm=a3140.7786765.0.0.5TCYgb">Mac 版</a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://www.dingtalk.com/win/d/?spm=a3140.7786765.0.0.5TCYgb">Windows 版</a>
+    </div>
+    <div id="kie-bar" class="kie-bar">
+        <div class="kie-logo"><img src="./DingDing_files/logo.png" alt=""></div>
+        钉钉不支持你当前使用的浏览器，可能会导致部分图片和信息的缺失。请下载使用最新版
+        <a href="http://pc.uc.cn/" class="kie-setup-taoBrowser" target="_blank" title="UC浏览器">UC浏览器</a>或
+        <a href="http://www.google.com/intl/zh-CN/chrome/" class="kie-setup-taoBrowser" target="_blank" title="谷歌浏览器">谷歌浏览器</a>或下载
+        <a id="app-download" target="_blank" href="https://www.dingtalk.com/?gotoDownload=true">钉钉桌面版（推荐）</a>
+    </div>
+    <div id="invalidAppTips" class="kie-bar">
+        <div class="kie-logo"><img src="./DingDing_files/logo(1).png" alt=""></div>
+        您当前的钉钉版本过低，请升级最新的
+        <a target="_blank" href="https://www.dingtalk.com/?gotoDownload=true">钉钉桌面版</a>
+    </div>
+    <style>
+        .kie-bar {
+            font-weight: normal;
+            text-align: center;
+            background-color: #FFF;
+            color: #e27839;
+            font-size: 14px;
+            text-shadow: 0px 0px 1px #efefef;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: 200px;
+            z-index: 9999;
+            display: none;
+        }
+
+            .kie-bar.cdn-error {
+                display: block;
+            }
+
+        .kie-logo img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 40px;
+        }
+
+        .kie-bar a {
+            color: #08c;
+            text-decoration: none;
+        }
+    </style>
+    <!-- uiView: -->
+    <div id="layout-container" ui-view="" class="ng-scope">
+        <div id="layout-main" dingtalk-theme="" class="ng-scope">
+            <div id="header" ng-dblclick="home.onHeaderDblClick($event)">
+                <window-operations class="ng-isolate-scope">
+                    <div class="window-operations">
+                        <ul>
+                            <li class="operation-button close-window" ng-click="windowOperations.closeWindow()"></li>
+                            <li class="operation-button mini-window" ng-click="windowOperations.miniWindow()"></li>
+                            <li class="operation-button expand-window" ng-click="windowOperations.fullScreen()"></li>
+                        </ul>
+                    </div>
+                </window-operations>
+                <div class="upload-container-wrap ng-isolate-scope tipper-attached" htitle="上传/下载" htitle-offset="left">
+                    <div class="iconfont upload-task-container" ng-click="uploadListCtrl.onUploadListClick($event)"></div>
+                    <div class="progress upload-task-progress ng-hide" ng-show="uploadListCtrl.uploadListCount&gt;0">
+                        <div class="progress-thumb" style="width: 100%;"></div>
+                    </div>
+                    <!--<span class="unread-num upload-unread-num" ng-if="uploadListCtrl.uploadListCount>0"><em >{{uploadListCtrl.uploadListCount}}</em></span>-->
+                    <!-- ngIf: uploadListCtrl.isShowList -->
+                </div>
+                <!-- <div class="call-entry" htitle="{{::home.text.dt_menu_tel_title}}" htitle-offset="left">
+                    <unread-call></unread-call>
+                    <i class="iconfont" ng-click="home.onTelClick()">&#xe6ef;</i>
+                </div> -->
+                <!-- ngIf: home.showDingBox -->
+                <div class="search-bar-wraper ng-isolate-scope" support-activate-shortcut="true" style="width: 204px; overflow: hidden;">
+                    <div class="main-search-2">
+                        <div class="ui-select-container ui-select-multiple select2 select2-container select2-container-multi">
+                            ta
+
+                            <div class="select2-search-field">
+                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input ui-select-search ng-pristine ng-valid ng-empty ng-touched" placeholder="搜索联系人、群组" ng-model="searchBar2.keyword" ng-click="searchBar2.activate()" ng-keydown="searchBar2.onInputPress($event)" ng-class="{ &#39;active&#39;: searchBar2.open }" ondrop="return false;">
+                            </div>
+                            <div class="select2-drop select2-with-searchbox select2-drop-active select2-display-none" ng-class="{&#39;select2-display-none&#39;: !searchBar2.open}">
+                                <div ng-click="searchBar2.preventClickPropagation($event)">
+                                    <!-- ngIf: searchBar2.SearchBarState.contains(searchBar2.SearchBarState.state['searchBar.default'], searchBar2.state) -->
+                                    <div ng-if="searchBar2.SearchBarState.contains(searchBar2.SearchBarState.state[&#39;searchBar.default&#39;], searchBar2.state)" search-bar-type="searchBar2.searchBarType" support-search-bar-type="searchBar2.supportSearchBarType" class="ng-scope ng-isolate-scope">
+                                        <ul class="search-type-list">
+                                            <!-- ngIf: default.isSearchBarTypeSupport(default.SearchBarType.CONTACT) -->
+                                            <li class="search-type-item ng-scope" ng-click="default.changeSearchBarType(default.SearchBarType.CONTACT)" ng-class="{ &#39;active&#39;: searchBarType === default.SearchBarType.CONTACT }" ng-if="default.isSearchBarTypeSupport(default.SearchBarType.CONTACT)">
+                                                <div class="icon"><i class="iconfont icon-contact"></i></div>
+                                                <span>联系人</span>
+                                            </li>
+                                            <!-- end ngIf: default.isSearchBarTypeSupport(default.SearchBarType.CONTACT) -->
+                                            <!-- ngIf: default.isSearchBarTypeSupport(default.SearchBarType.GROUP) -->
+                                            <li class="search-type-item ng-scope" ng-click="default.changeSearchBarType(default.SearchBarType.GROUP)" ng-class="{ &#39;active&#39;: searchBarType === default.SearchBarType.GROUP }" ng-if="default.isSearchBarTypeSupport(default.SearchBarType.GROUP)">
+                                                <div class="icon"><i class="iconfont icon-group"></i></div>
+                                                <span>群组</span>
+                                            </li>
+                                            <!-- end ngIf: default.isSearchBarTypeSupport(default.SearchBarType.GROUP) -->
+                                            <!-- ngIf: default.isSearchBarTypeSupport(default.SearchBarType.CHAT) -->
+                                        </ul>
+                                        <p class="search-type-hint">按键盘 “tab” 快速切换分类</p>
+                                    </div>
+                                    <!-- end ngIf: searchBar2.SearchBarState.contains(searchBar2.SearchBarState.state['searchBar.default'], searchBar2.state) -->
+                                    <!-- ngIf: searchBar2.SearchBarState.contains(searchBar2.SearchBarState.state['searchBar.result'], searchBar2.state) -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-bar-icons ng-hide" ng-show="searchBar2.open">
+                            <i class="remove-icon iconfont ng-hide" ng-show="searchBar2.keyword.length &gt; 0" ng-click="searchBar2.clear()"></i>
+                            <i class="search-bar-icon-divider"></i>
+                            <i class="search-icon iconfont" ng-show="!searchBar2.isSearching" ng-click="searchBar2.clearDelayTimerAndSearch()"></i>
+                            <i class="search-loading-icon ng-hide" ng-show="searchBar2.isSearching"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body">
+                <div id="menu-pannel">
+                    <!-- 此dom不可变更 -->
+                    <div class="profile">
+                        <div class="big-52 with-border user-avatar ng-isolate-scope" uid="49192224" open-profile="1" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOA9csF80CHM0CHA_540_540.jpg_60x60q90.jpg&quot;);"></div>
+                        <div class="connecting-bar">
+                            <!-- ngIf: home.login_state === 1 -->
+                        </div>
+                    </div>
+                    <ul class="main-menus">
+                        <li class="menu-item menu-message selected" ng-click="home.goState(&#39;authorized.im&#39;)" ng-class="{selected:home.$state.includes(&#39;authorized.im&#39;)}" ng-dblclick="home.scrollToUnReadConv()">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="消息" htitle-direction="right"></i>
+                                <all-conv-unread-count class="ng-isolate-scope">
+                                    <!-- ngIf: $ctrl.unreadMsgCount > 0 -->
+                                </all-conv-unread-count>
+                            </div>
+                        </li>
+                        <li class="menu-item menu-ding" ng-click="home.goState(&#39;authorized.ding&#39;)" ng-class="{selected:home.$state.includes(&#39;authorized.ding&#39;)}">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="DING" htitle-direction="right"></i>
+                                <!-- ngIf: home.receiveList.newCount!==0 -->
+                                <!-- ngIf: home.receiveList.newCount===0&&(home.receiveList.hasNewComment||home.sendList.hasNewComment) -->
+                            </div>
+                        </li>
+                        <li class="menu-item menu-company-call-center" ng-click="home.onTelClick()" ng-class="{selected:home.$state.includes(&#39;authorized.companyCallCenter&#39;)}">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="电话" htitle-direction="right"></i>
+                                <unread-call class="ng-isolate-scope">
+                                    <!-- ngIf: $ctrl.unreadPointNum > 0 -->
+                                </unread-call>
+                            </div>
+                        </li>
+                        <li class="menu-item menu-contact" ng-click="home.onContactClick()" ng-class="{selected:home.$state.includes(&#39;authorized.contact&#39;)}">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="联系人" htitle-direction="right"></i>
+                            </div>
+                        </li>
+                        <!-- ngIf: home.isShowMicroApp && !home.ua.isDesktop || home.isShowMicroApp && home.ua.isDesktop && !home.isShowWorkIndependent -->
+                        <li class="menu-item menu-micro-app ng-scope" ng-if="home.isShowMicroApp &amp;&amp; !home.ua.isDesktop || home.isShowMicroApp &amp;&amp; home.ua.isDesktop &amp;&amp; !home.isShowWorkIndependent" ng-click="home.onMicroAppClick()" ng-class="{selected:home.$state.includes(&#39;authorized.microApp&#39;)}">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="工作" htitle-direction="right"></i>
+                            </div>
+                        </li>
+                        <!-- end ngIf: home.isShowMicroApp && !home.ua.isDesktop || home.isShowMicroApp && home.ua.isDesktop && !home.isShowWorkIndependent -->
+                        <!-- ngIf: home.ua.isDesktop && home.isShowMicroApp && home.isShowWorkIndependent -->
+                        <li class="menu-item menu-cspace" ng-click="home.goState(&#39;authorized.cspace&#39;)" ng-class="{selected:home.$state.includes(&#39;authorized.cspace&#39;)}" log="tab_space_click">
+                            <div class="menu-item-content">
+                                <i class="iconfont menu-icon tipper-attached" htitle="钉盘" htitle-direction="right"></i>
+                                <unread-cspace class="ng-isolate-scope">
+                                    <!-- ngIf: $ctrl.unreadPointNum > 0 -->
+                                </unread-cspace>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="extra-options">
+                        <div class="extra-options-inner">
+                            <org-email class="ng-isolate-scope">
+                                <li class="extra-item org-email" log="tab_mail_click" ng-class="{selected:$ctrl.$state.includes(&#39;authorized.cmail&#39;)}">
+                                    <div class="extra-item-box" ng-click="$ctrl.openEmail()">
+                                        <i class="iconfont menu-icon-mail tipper-attached" htitle="钉邮" htitle-direction="right"></i>
+                                        <!-- ngIf: $ctrl.isShowNum && $ctrl.emailConv.newMsg > 0 -->
+                                        <!-- ngIf: $ctrl.isShowRedDot --><i ng-if="$ctrl.isShowRedDot" class="iconfont unread-dot ng-scope"></i>
+                                        <!-- end ngIf: $ctrl.isShowRedDot -->
+                                    </div>
+                                </li>
+                            </org-email>
+                            <li class="extra-item more-actions">
+                                <div function-menu="" class="ng-isolate-scope">
+                                    <div class="extra-item-box" ng-click="menu.openFunctionMenu()">
+                                        <i class="iconfont tipper-attached" htitle="创建" htitle-direction="right"></i>
+                                    </div>
+                                    <div class="tip-menu ng-hide" ng-show="menu.isOpen">
+                                        <div class="tri">
+                                            <div class="tri-border tb-border"></div>
+                                            <div class="tri-border tb-back"></div>
+                                        </div>
+                                        <ul class="menus">
+                                            <li class="menu-item ng-binding" ng-click="menu.createOrgGroup()">内部群聊天</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.showCreateGrouopModal()">发起聊天</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.showSendDingModal()">Ding</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.addFriend()">添加好友</li>
+                                            <!-- <li class="menu-item" ng-if="menu.canVideoConference" ng-click="menu.createConf()">{{::menu.text.dt_option_create_videoconf}}</li> -->
+                                            <!-- ngIf: menu.showScreenProjection -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv -->
+                                            <!-- ngIf: !menu.isProductEnv && menu.ua.isDingTalkWin -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li ng-show="isAdmin" class="extra-item admin ng-isolate-scope" log="tab_admin_click">
+                                ab
+                                tr
+                                <div class="extra-item-box" ng-click="goToOA()">
+                                    <i class="iconfont tipper-attached" htitle="管理" htitle-direction="right"></i>
+                                    <!-- ngIf: isShowOASSONew --><i class="unread-dot iconfont ng-scope" ng-if="isShowOASSONew"></i>
+                                    <!-- end ngIf: isShowOASSONew -->
+                                </div>
+                            </li>
+                            <li class="extra-item settings">
+                                <div setting-menu="" class="ng-isolate-scope">
+                                    <div class="extra-item-box" ng-click="menu.openSettingMenu()">
+                                        <i class="iconfont tipper-attached" htitle="更多" htitle-direction="right"></i>
+                                        <!-- ngIf: menu.isShowOASSONew -->
+                                    </div>
+                                    <div class="tip-menu ng-hide" ng-show="menu.isOpen">
+                                        <div class="tri">
+                                            <div class="tri-border tb-border"></div>
+                                            <div class="tri-border tb-back"></div>
+                                        </div>
+                                        <ul class="menus">
+                                            <li class="menu-item ng-binding" ng-click="menu.showProfileSettingModal()">个人设置</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.showSysSettingModal()">系统设置</li>
+                                            <!-- ngIf: menu.isShowRobotSwitch -->
+                                            <li class="menu-item ng-binding" ng-click="menu.showPwdModifyModal()">修改密码</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.goDownload()">下载手机版</li>
+                                            <!-- ngIf: menu.isNoOrgUser -->
+                                            <li class="menu-item ng-binding" ng-click="menu.openDingXiaoMi()">帮助反馈</li>
+                                            <li class="menu-item ng-binding" ng-click="menu.logout()">退出登录</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <!-- uiView: -->
+                <div ui-view="" id="menu-pannel-body" class="ng-scope">
+                    <div id="sub-menu-pannel" class="conv-list-pannel ng-scope ng-isolate-scope" layout-resize="im.layoutResizeConf.direction" min-width="im.layoutResizeConf.minWidth" max-width="im.layoutResizeConf.maxWidth" storage-key="im.layoutResizeConf.storageKey" get-max-width="im.layoutResizeConf.getMaxWidth()">
+                        <div class="conv-lists-box ng-isolate-scope">
+                            <!-- ngRepeat: showType in convList.showType -->
+                            <div class="conv-lists ng-scope" ng-repeat="showType in convList.showType">
+                                <!-- ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="4248001:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope pin" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="4248001:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="4248001:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="4248001" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOcmJ4PszIzMg_200_200.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">文件小助手</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-23 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">[文件]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="263623109" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope pin conv-item-company" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="263623109" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="263623109">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lADOkh1Aj80CWM0CWA" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOkh1Aj80CWM0CWA_600_600.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">测试群公告</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup --><i class="icon-company ng-scope" ng-if="::convItem.conv.isCompanyGroup" ng-class="{&#39;icon-dept-company&#39;:convItem.conv.isDeptGroup ,&#39;icon-all-user-company&#39;: convItem.conv.isAllUserGroup}"></i>
+                                                    <!-- end ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">08:51</span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">测</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                            </div>
+                            <!-- end ngRepeat: showType in convList.showType -->
+                            <div class="conv-lists ng-scope" ng-repeat="showType in convList.showType">
+                                <!-- ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="85526228" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope conv-item-company" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="85526228" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="85526228">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lALOA0CVYc0CWM0CWA" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOA0CVYc0CWM0CWA_600_600.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">工作日志提交群</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup --><i class="icon-company ng-scope" ng-if="::convItem.conv.isCompanyGroup" ng-class="{&#39;icon-dept-company&#39;:convItem.conv.isDeptGroup ,&#39;icon-all-user-company&#39;: convItem.conv.isAllUserGroup}"></i>
+                                                    <!-- end ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">昨天 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">牛文瑞: [日志]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="92015311" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope conv-item-company" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="92015311" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="92015311">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lALOA0CYA80CWM0CWA" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOA0CYA80CWM0CWA_600_600.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">移动事业部</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup --><i class="icon-company ng-scope icon-dept-company" ng-if="::convItem.conv.isCompanyGroup" ng-class="{&#39;icon-dept-company&#39;:convItem.conv.isDeptGroup ,&#39;icon-all-user-company&#39;: convItem.conv.isAllUserGroup}"></i>
+                                                    <!-- end ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">昨天 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">侯志远: [日志]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="72533596" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope conv-item-company" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="72533596" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="72533596">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lADOcFhUeM0CWM0CWA" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOcFhUeM0CWM0CWA_600_600.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">华兴科软总群</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup --><i class="icon-company ng-scope" ng-if="::convItem.conv.isCompanyGroup" ng-class="{&#39;icon-dept-company&#39;:convItem.conv.isDeptGroup ,&#39;icon-all-user-company&#39;: convItem.conv.isAllUserGroup}"></i>
+                                                    <!-- end ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">昨天 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">樊建宁: [表情]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="237050:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="237050:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="237050:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="237050" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOAFF1eczIzMg_200_200.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">钉钉小秘书</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-21 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">3.3版本新功能介绍</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="20999:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="20999:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="20999:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="20999" style="background-image: url(&quot;https://static.dingtalk.com/media/lALORniPKMzIzMg_200_200.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">钉钉管理助手</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-21 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">钉钉3.3新版管理员新功能介绍</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:147703494" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:147703494" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:147703494">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="147703494" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOc_vh680Cfs0Cfg_638_638.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">石宝霞</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-19 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:149012013" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:149012013" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:149012013">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="149012013" style="background-color: rgb(179, 137, 121);">
+                                                    <div class="avatar-text">晓东</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">杨晓东</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-19 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:159402212" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:159402212" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:159402212">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="159402212" style="background-color: rgb(247, 181, 94);">
+                                                    <div class="avatar-text">其民</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">段其民</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:149003615" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:149003615" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:149003615">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="149003615" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOdOVLCM0B4M0B4A_480_480.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">杨璐</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="247042695" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="247042695" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="247042695">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lALOPxuSuM0B0c0B5Q" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOPxuSuM0B0c0B5Q_485_465.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">蓝色之城</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">[考勤打卡]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:109150694" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:109150694" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:109150694">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="109150694" style="background-color: rgb(77, 169, 235);">
+                                                    <div class="avatar-text">飞羽</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">飞羽</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:169196687" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:169196687" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:169196687">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="169196687" style="background-color: rgb(86, 138, 173);">
+                                                    <div class="avatar-text">晓帅</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">樊晓帅</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:169193959" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:169193959" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:169193959">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="169193959" style="background-color: rgb(23, 194, 149);">
+                                                    <div class="avatar-text">牛鑫</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">牛鑫</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-16 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="66521052" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="66521052" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="66521052">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lALOAEgEP8zIzMg" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOAEgEP8zIzMg_200_200.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">山西华兴科软有限公司</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-08 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">[审批]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="20993:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="20993:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="20993:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="20993" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOUWBw5cz2zPY_246_246.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">钉钉福利社</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">07-15 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">[福利通知]</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="220035784" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope conv-item-company" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="220035784" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="220035784">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                                <div class="normal group-logo-avatar ng-scope ng-isolate-scope" ng-if="::isGroupIcon" media-id="@lADOcEfp-s0CWM0CWA" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOcEfp-s0CWM0CWA_600_600.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">蓝色之城</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup --><i class="icon-company ng-scope icon-all-user-company" ng-if="::convItem.conv.isCompanyGroup" ng-class="{&#39;icon-dept-company&#39;:convItem.conv.isDeptGroup ,&#39;icon-all-user-company&#39;: convItem.conv.isAllUserGroup}"></i>
+                                                    <!-- end ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-27 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">上官路路退出群聊</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="164901:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="164901:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="164901:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="164901" style="background-image: url(&quot;https://static.dingtalk.com/media/lALOkUB258zIzMg_200_200.png_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">新的好友</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-12 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">新的好友推荐</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:50441547" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:50441547" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:50441547">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="50441547" style="background-color: rgb(77, 169, 235);">
+                                                    <div class="avatar-text">增辉</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">胡增辉</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-12 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49189398:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49189398:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49189398:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="49189398" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOA9N67c0CG80CGg_538_539.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">梁晓芳</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-08 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="2859503:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="2859503:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="2859503:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="2859503" style="background-color: rgb(86, 138, 173);">
+                                                    <div class="avatar-text">贺龙</div>
+                                                </div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">贺龙</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">06-08 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">待遇怎么样</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="49192224" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOA9csF80CHM0CHA_540_540.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">梁智慧</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">05-17 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">vivo</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="49192224:78456454" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="49192224:78456454" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="49192224:78456454">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="78456454" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOWDUUDc0BsM0BsA_432_432.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">张曼</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">05-10 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">我通过了你的好友验证请求，现在我们可以开始聊天了</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                                <conv-item ng-repeat="convId in convList.convListObj[showType] track by convId" conv-id="convId" con-id="3017451:49192224" class="ng-scope ng-isolate-scope">
+                                    <div class="list-item conv-item context-menu ng-isolate-scope" ng-class="{&#39;active&#39; : convItem.convListObj.activeConvId === convItem.convId,&#39;pin&#39;:convItem.conv.baseConversation.sort &gt; 0,&#39;notice-mute&#39;: convItem.conv.notificationOff,&#39;conv-item-company&#39;:convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,&#39;safety-item&#39;: convItem.conv.isSafety}" context-menu="" menu-data="3017451:49192224" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+                                        <i class="iconfont icon-delete-conv tipper-attached" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)"></i>
+                                        <div class="avatar-wrap">
+                                            <div class="group-avatar ng-isolate-scope" cid="3017451:49192224">
+                                                <!-- ngIf: ::isSingleChat -->
+                                                <div class="normal user-avatar ng-scope ng-isolate-scope" ng-if="::isSingleChat" uid="3017451" style="background-image: url(&quot;https://static.dingtalk.com/media/lADOBS69TM0BsM0BsA_432_432.jpg_60x60q90.jpg&quot;);"></div>
+                                                <!-- end ngIf: ::isSingleChat -->
+                                                <!-- ngIf: ::isGroupIcon -->
+                                            </div>
+                                        </div>
+                                        <i class="icon-safety-avatar ng-hide" ng-show="convItem.conv.isSafety"></i>
+                                        <div class="conv-item-content">
+                                            <divf class="title-wrap info">
+                                                <div class="name-wrap">
+                                                    <p class="name ng-binding" ng-bind-html="convItem.conv.baseConversation.title|emoj">徐捷惠</p>
+                                                    <!-- ngIf: ::convItem.conv.isCompanyGroup -->
+                                                </div>
+                                                <span class="time ng-binding">12-04 </span>
+                                            </divf>
+                                            <div class="latest-msg-info">
+                                                <p class="latest-msg">
+                                                    <span ng-show="convItem.conv.remindType" class="highlight ng-binding ng-hide"></span>
+                                                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="&#39;[&#39; + (convItem.conv.newMsg)+&#39;条]&#39;" class="ng-binding ng-hide">[0条]</span>
+                                                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj" class="ng-binding">的聊天样式等</span>
+                                                </p>
+                                                <div class="noti">
+                                                    <i class="iconfont icon-conv-mute ng-hide" ng-show="convItem.conv.notificationOff"></i>
+                                                    <!-- ngIf: convItem.conv.newMsg -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </conv-item>
+                                <!-- end ngRepeat: convId in convList.convListObj[showType] track by convId -->
+                            </div>
+                            <!-- end ngRepeat: showType in convList.showType -->
+                            <!-- ngIf: convList.convListObj.isLoading -->
+                        </div>
+                        <div class="layout-resize-right"></div>
+                    </div>
+                    <!-- uiView: -->
+                    <div ui-view="" id="content-pannel" class="ng-scope">
+                        <div class="conv-detail-pannel ng-scope">
+                            <div class="nocontent-logo">
+                                <div>
+                                    <img ng-src="https://g.alicdn.com/DingTalkWeb/web/3.3.1/app/img/microApp/TB1wcFmIVXXXXcHXXXXfnGpRpXX-620-520.png" alt="欢迎" src="./DingDing_files/TB1wcFmIVXXXXcHXXXXfnGpRpXX-620-520.png">
+                                </div>
+                            </div>
+                            <div class="nocontent-tips">
+                                <p ng-show="nocontent.timeType == &#39;morning&#39;"><img ng-src="https://g.alicdn.com/DingTalkWeb/web/3.3.1/app/img/nocontent/1f31e.png" alt="早上好" src="./DingDing_files/1f31e.png"> 早上好，今天请继续加油！</p>
+                                <p ng-show="nocontent.timeType == &#39;afternoon&#39;" class="ng-hide"><img ng-src="https://g.alicdn.com/DingTalkWeb/web/3.3.1/app/img/nocontent/2615.png" alt="下午好" src="./DingDing_files/2615.png"> 下午好，喝杯茶吧，让精神抖擞起来。</p>
+                                <p ng-show="nocontent.timeType == &#39;night&#39;" class="ng-hide"><img ng-src="https://g.alicdn.com/DingTalkWeb/web/3.3.1/app/img/nocontent/1f31b.png" alt="晚上好" src="./DingDing_files/1f31b.png"> 晚上好，请注意休息。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--插件-->
+    <script type="text/javascript">
+        var hasScreenshotPlugin = false;
+        try {
+            var mimetype = navigator.mimeTypes["application/x-dingscreenshot-plugin"];
+            if (mimetype) {
+                hasScreenshotPlugin = true;
+            } else {
+                hasScreenshotPlugin = false;
+            }
+        } catch (e) {
+            hasScreenshotPlugin = false;
+        }
+
+        if (hasScreenshotPlugin) {
+            document.write('<embed id="screenshotPlugin" wmode="opaque" width="1" height="1" type="application/x-dingscreenshot-plugin"></embed>');
+        }
+    </script>
+    <script>
+        document.write('<scrip' + 't src="//' + staticHost + '/' + groupName + '/web/' + version + '/app/js/index-global.js"></s' + 'cript>')
+    </script>
+    <script src="./DingDing_files/index-global.js"></script>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+
+        var _isAtomShell = window.navigator.userAgent.indexOf('AtomShell') !== -1;
+        var _isNodeWebkit = window.navigator.userAgent.indexOf('nw') !== -1;
+
+        window.upgradeApp = function (isForce) {
+            if (isForce) {
+                $('#invalidAppTips').css("display", "block");
+            };
+        }
+
+        if (_isNodeWebkit) {
+            var gui = require('nw.gui');
+            gui.App.clearCache();
+            window._nwrequire = require;
+        }
+
+        function checkUpdate() {
+            var upd = require('updater'),
+                gui = require('nw.gui'),
+                win = gui.Window.get(),
+                app = gui.App;
+
+            //console.log(app);
+            var pkg = {
+                "version": app.manifest.version,
+                "manifestUrl": app.manifest.manifestUrl
+            }
+
+            var tools = upd.tools;
+            var appMinVersion = '0.4.0';
+            var checkCurrentVersionWithMinVersion = tools.versionCmp(app.manifest.version, appMinVersion);
+
+            var jumpToForceUpdateOnFrontWin = function () {
+
+                global.currentWin.window.location.href = tools.getCurrentExecDir() + "\\update\\forceUpdate.html"
+            }
+
+            if (checkCurrentVersionWithMinVersion === "smaller") {
+                jumpToForceUpdateOnFrontWin();
+            }
+
+        }
+
+        //atom-shell走的逻辑
+        function _appSetting() {
+            if (_isAtomShell) {
+                window._require = require;
+                $("body").delegate("a", "click", function (event) {
+                    var href = $(this).attr("href");
+                    var shell = _require("shell");
+                    shell.openExternal(href);
+                });
+                upgradeApp(true);
+            }
+
+        }
+
+        if (!(/(webkit|Firefox)/i.test(ua))) {
+            $('#kie-bar').css("display", "block");
+        } else {
+            document.write('<scrip' + 't src="//' + staticHost + '/' + groupName + '/web/' + version + '/app/js/app.js"></s' + 'cript>')
+        }
+    </script>
+    <script src="./DingDing_files/app.js"></script>
+    <script type="text/vbscript">
+        Function IEBinary_getByteAt(strBinary, iOffset) IEBinary_getByteAt = AscB(MidB(strBinary, iOffset + 1, 1)) End Function Function IEBinary_getBytesAt(strBinary, iOffset, iLength) Dim aBytes() ReDim aBytes(iLength - 1) For i = 0 To iLength - 1 aBytes(i) = IEBinary_getByteAt(strBinary, iOffset + i) Next IEBinary_getBytesAt = aBytes End Function Function IEBinary_getLength(strBinary) IEBinary_getLength = LenB(strBinary) End Function
+    </script>
+    <script type="text/javascript">
+        var JS_VERSION = 1.0;
+    </script>
+    <script language="Javascript1.1">
+        var JS_VERSION = 1.1;
+    </script>
+    <script language="Javascript1.2">
+        var JS_VERSION = 1.2;
+    </script>
+    <script language="Javascript1.3">
+        var JS_VERSION = 1.3;
+    </script>
+    <script language="Javascript1.4">
+        var JS_VERSION = 1.4;
+    </script>
+    <script language="Javascript1.5">
+        var JS_VERSION = 1.5;
+    </script>
+    <script language="Javascript1.6">
+        var JS_VERSION = 1.6;
+    </script>
+    <script language="Javascript1.7">
+        var JS_VERSION = 1.7;
+    </script>
+    <script language="Javascript1.8">
+        var JS_VERSION = 1.8;
+    </script>
+    <script language="Javascript1.9">
+        var JS_VERSION = 1.9;
+    </script>
+    <div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden"><object type="application/x-shockwave-flash" data="./DingDing_files/fp.swf.下载" width="1" height="1" id="umFlash" class="umidWrapper"><param name="movie" value="https://assets.alicdn.com/g/security/umflash/fp.swf?v1=1"><param name="allowScriptAccess" value="always"></object><img src="./DingDing_files/clear.png"></div>
+    <div class="tip-menu ng-scope" context-menu-item="">
+        <ul class="menu">
+            <!-- ngRepeat: item in items -->
+        </ul>
+    </div>
+    <div class="context-menu-back-pop"></div>
+</body>
+</html>
