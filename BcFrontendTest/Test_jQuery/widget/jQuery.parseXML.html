@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>jQuery.parseXML(data) | jQuery API 中文手册</title>
+
+<meta name="description" content="解析一个字符串到一个XML文件。 - jQuery API 中文手册">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style.css" tppabs="style/style.css"  />
+</head>
+<body id="split">
+
+<div id="content" class="a2">
+  <div rel="jQuery.parseXML">
+    <h2><span>返回值: XMLDocumen</span>jQuery.parseXML(data)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>解析一个字符串到一个XML文件。</p>
+      <div class="longdesc">
+        <p>jQuery.parseXML使用原生解析函数浏览器创建一个有效的XML文档。这文档可以被传递给jQuery创建一个典型的jQuery对象，可以查询及操作。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>data</strong><span></span><em>V1.5</em></h4>
+      <p>用来解析的格式良好的XML字符串。 </p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>创建一个jQuery对象使用一个XML字符串并得到标题节点的值。:</p>
+      <pre>var xml = '&lt;rss version=&quot;2.0&quot;&gt;&lt;channel&gt;&lt;title&gt;RSS Title&lt;/title&gt;&lt;/channel&gt;&lt;/rss&gt;',
+      xmlDoc = $.parseXML( xml ),
+      $xml = $( xmlDoc ),
+      $title = $xml.find( 'title' );	        // append &quot;RSS Title&quot; to #someElement
+  $( '#someElement' ).append( $title.text() );	    // change the title to &quot;XML Title&quot;
+  $title.text( 'XML Title' );    // append &quot;XML Title&quot; to #anotherElement
+  $( '#anotherElement' ).append( $title.text() );</pre>
+    </div>
+  </div>
+  <!-- 广告 -->  
+</div>
+</body>
+<script type="text/javascript" src="jquery.min.js" tppabs="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js" tppabs="jquery.autocomplete.js"></script>
+<script type="text/javascript" src="dtree.js" tppabs="dtree.js"></script>
+<script type="text/javascript" src="js.js" tppabs="js.js"></script>
+
+</html>

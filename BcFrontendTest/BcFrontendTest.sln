@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Backbone", "Test_Backb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_JavaScript", "Test_JavaScript\Test_JavaScript.csproj", "{90676882-54A6-487F-A657-8AEFB5CE1AEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_jQuery", "Test_jQuery\Test_jQuery.csproj", "{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{90676882-54A6-487F-A657-8AEFB5CE1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90676882-54A6-487F-A657-8AEFB5CE1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90676882-54A6-487F-A657-8AEFB5CE1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widget appId="11480864" channelCode="000" height="480" pid="" sreensize="4.5" version="01.00.0003" viewmode="application" widgetId="" width="320"> 
+  <name>Jquery中文速查手册参考手册</name>  
+  <description/>  
+  <author email=""></author>  
+  <icon src="icon.png"/>  
+  <license href=""/>  
+  <content encoding="utf-8" src="index.html"/>  
+  <updateurl/>  
+  <logserverip/>  
+  <showmyspace>false</showmyspace>  
+  <obfuscation>false</obfuscation>  
+  <bgcolor>#FFFFFF</bgcolor>  
+  <orientation>15</orientation> 
+</widget>

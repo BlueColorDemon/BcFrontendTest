@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>jQuery.fn.extend(object) | jQuery API 中文手册</title>
+
+<meta name="description" content="扩展 jQuery 元素集来提供新的方法（通常用来制作插件）。 - jQuery API 中文手册">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style.css" tppabs="style/style.css"  />
+</head>
+<body id="split">
+
+<div id="content" class="a2">
+  <div rel="jQuery.fn.extend">
+    <h2><span>返回值:jQuery</span>jQuery.fn.extend(object)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>扩展 jQuery 元素集来提供新的方法（通常用来制作插件）。</p>
+      <div class="longdesc">
+        <p>查看这里&lt;a href="http://docs.jquery.com/Plugins/Authoring" title="Plugins/Authoring"&gt;Plugins/Authoring&lt;/a&gt;可以获取更多信息。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>object</strong><span>Object</span><em>V1.0</em></h4>
+      <p>用来扩充 jQuery 对象。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>增加两个插件方法。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>jQuery.fn.extend({
+  check: function() {
+    return this.each(function() { this.checked = true; });
+  },
+  uncheck: function() {
+    return this.each(function() { this.checked = false; });
+  }
+});</code></pre>
+      <h5>结果:</h5>
+      <pre><code>$("input[type=checkbox]").check();
+$("input[type=radio]").uncheck();</code></pre>
+    </div>
+  </div>
+  <!-- 广告 -->  
+</div>
+</body>
+<script type="text/javascript" src="jquery.min.js" tppabs="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js" tppabs="jquery.autocomplete.js"></script>
+<script type="text/javascript" src="dtree.js" tppabs="dtree.js"></script>
+<script type="text/javascript" src="js.js" tppabs="js.js"></script>
+
+</html>

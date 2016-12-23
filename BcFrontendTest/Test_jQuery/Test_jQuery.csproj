@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D0BE6CA-58FC-4CB7-8358-F17B2E1737DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test_jQuery</RootNamespace>
+    <AssemblyName>Test_jQuery</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="widget\hm.js-27646e8f048a16e17f027842e6bdb8f0" />
+    <Content Include="widget\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="widget\add.html" />
+    <Content Include="widget\addBack.html" />
+    <Content Include="widget\addClass.html" />
+    <Content Include="widget\after.html" />
+    <Content Include="widget\ajaxComplete.html" />
+    <Content Include="widget\ajaxError.html" />
+    <Content Include="widget\ajaxSend.html" />
+    <Content Include="widget\ajaxStart.html" />
+    <Content Include="widget\ajaxStop.html" />
+    <Content Include="widget\ajaxSuccess.html" />
+    <Content Include="widget\all.html" />
+    <Content Include="widget\andSelf.html" />
+    <Content Include="widget\animate.html" />
+    <Content Include="widget\animated.html" />
+    <Content Include="widget\append.html" />
+    <Content Include="widget\appendTo.html" />
+    <Content Include="widget\attr.html" />
+    <Content Include="widget\attributeContains.html" />
+    <Content Include="widget\attributeEndsWith.html" />
+    <Content Include="widget\attributeEquals.html" />
+    <Content Include="widget\attributeHas.html" />
+    <Content Include="widget\attributeMultiple.html" />
+    <Content Include="widget\attributeNotEqual.html" />
+    <Content Include="widget\attributeStartsWith.html" />
+    <Content Include="widget\before.html" />
+    <Content Include="widget\bind.html" />
+    <Content Include="widget\blur.html" />
+    <Content Include="widget\bugandUpdate.html" />
+    <Content Include="widget\buglist.js" />
+    <Content Include="widget\button.html" />
+    <Content Include="widget\callbacks.add.html" />
+    <Content Include="widget\callbacks.disable.html" />
+    <Content Include="widget\callbacks.empty.html" />
+    <Content Include="widget\callbacks.fire.html" />
+    <Content Include="widget\callbacks.fired.html" />
+    <Content Include="widget\callbacks.fireWith.html" />
+    <Content Include="widget\callbacks.has.html" />
+    <Content Include="widget\callbacks.lock.html" />
+    <Content Include="widget\callbacks.locked.html" />
+    <Content Include="widget\callbacks.remove.html" />
+    <Content Include="widget\change.html" />
+    <Content Include="widget\changelog.txt" />
+    <Content Include="widget\checkbox.html" />
+    <Content Include="widget\checked.html" />
+    <Content Include="widget\child.html" />
+    <Content Include="widget\children.html" />
+    <Content Include="widget\class.html" />
+    <Content Include="widget\clearQueue.html" />
+    <Content Include="widget\click.html" />
+    <Content Include="widget\clone.html" />
+    <Content Include="widget\closest.html" />
+    <Content Include="widget\config.xml" />
+    <Content Include="widget\contains.html" />
+    <Content Include="widget\contents.html" />
+    <Content Include="widget\context.html" />
+    <Content Include="widget\css.html" />
+    <Content Include="widget\data.html" />
+    <Content Include="widget\dblclick.html" />
+    <Content Include="widget\deferred.always.html" />
+    <Content Include="widget\deferred.done.html" />
+    <Content Include="widget\deferred.fail.html" />
+    <Content Include="widget\deferred.isRejected.html" />
+    <Content Include="widget\deferred.isResolved.html" />
+    <Content Include="widget\deferred.notify.html" />
+    <Content Include="widget\deferred.notifyWith.html" />
+    <Content Include="widget\deferred.pipe.html" />
+    <Content Include="widget\deferred.progress.html" />
+    <Content Include="widget\deferred.promise.html" />
+    <Content Include="widget\deferred.reject.html" />
+    <Content Include="widget\deferred.rejectWith.html" />
+    <Content Include="widget\deferred.resolve.html" />
+    <Content Include="widget\deferred.resolveWith.html" />
+    <Content Include="widget\deferred.state.html" />
+    <Content Include="widget\deferred.then.html" />
+    <Content Include="widget\delay.html" />
+    <Content Include="widget\delegate.html" />
+    <Content Include="widget\dequeue.html" />
+    <Content Include="widget\descendant.html" />
+    <Content Include="widget\detach.html" />
+    <Content Include="widget\die.html" />
+    <Content Include="widget\disabled.html" />
+    <Content Include="widget\donateData.js" />
+    <Content Include="widget\downloads.html" />
+    <Content Include="widget\dtree.js" />
+    <Content Include="widget\each.html" />
+    <Content Include="widget\element.html" />
+    <Content Include="widget\empty.html" />
+    <Content Include="widget\empty_1.html" />
+    <Content Include="widget\enabled.html" />
+    <Content Include="widget\end.html" />
+    <Content Include="widget\eq.html" />
+    <Content Include="widget\eq_1.html" />
+    <Content Include="widget\error.html" />
+    <Content Include="widget\even.html" />
+    <Content Include="widget\event.currentTarget.html" />
+    <Content Include="widget\event.data.html" />
+    <Content Include="widget\event.delegateTarget.html" />
+    <Content Include="widget\event.isDefaultPrevented.html" />
+    <Content Include="widget\event.isImmediatePropagationStopped.html" />
+    <Content Include="widget\event.isPropagationStopped.html" />
+    <Content Include="widget\event.namespace.html" />
+    <Content Include="widget\event.pageX.html" />
+    <Content Include="widget\event.pageY.html" />
+    <Content Include="widget\event.preventDefault.html" />
+    <Content Include="widget\event.relatedTarget.html" />
+    <Content Include="widget\event.result.html" />
+    <Content Include="widget\event.stopImmediatePropagation.html" />
+    <Content Include="widget\event.stopPropagation.html" />
+    <Content Include="widget\event.target.html" />
+    <Content Include="widget\event.timeStamp.html" />
+    <Content Include="widget\event.type.html" />
+    <Content Include="widget\event.which.html" />
+    <Content Include="widget\fadeIn.html" />
+    <Content Include="widget\fadeOut.html" />
+    <Content Include="widget\fadeTo.html" />
+    <Content Include="widget\fadeToggle.html" />
+    <Content Include="widget\file.html" />
+    <Content Include="widget\filter.html" />
+    <Content Include="widget\find.html" />
+    <Content Include="widget\finish.html" />
+    <Content Include="widget\first.html" />
+    <Content Include="widget\firstChild.html" />
+    <Content Include="widget\firstOfType.html" />
+    <Content Include="widget\first_1.html" />
+    <Content Include="widget\fl_jt.jpg" />
+    <Content Include="widget\focus.html" />
+    <Content Include="widget\focusin.html" />
+    <Content Include="widget\focusout.html" />
+    <Content Include="widget\focus_1.html" />
+    <Content Include="widget\get.html" />
+    <Content Include="widget\gt.html" />
+    <Content Include="widget\has.html" />
+    <Content Include="widget\hasClass.html" />
+    <Content Include="widget\has_1.html" />
+    <Content Include="widget\header.html" />
+    <Content Include="widget\height.html" />
+    <Content Include="widget\hidden_1.html" />
+    <Content Include="widget\hide.html" />
+    <Content Include="widget\hm.gif" />
+    <Content Include="widget\hover.html" />
+    <Content Include="widget\html.html" />
+    <Content Include="widget\html5.html" />
+    <Content Include="widget\icon.png" />
+    <Content Include="widget\ico_mailme_11.png" />
+    <Content Include="widget\id.html" />
+    <Content Include="widget\image.html" />
+    <Content Include="widget\index.html" />
+    <Content Include="widget\index_1.html" />
+    <Content Include="widget\innerHeight.html" />
+    <Content Include="widget\innerWidth.html" />
+    <Content Include="widget\input.html" />
+    <Content Include="widget\insertAfter.html" />
+    <Content Include="widget\insertBefore.html" />
+    <Content Include="widget\is.html" />
+    <Content Include="widget\jQuery.ajax.html" />
+    <Content Include="widget\jQuery.ajaxPrefilter.html" />
+    <Content Include="widget\jQuery.ajaxSetup.html" />
+    <Content Include="widget\jquery.autocomplete.js" />
+    <Content Include="widget\jQuery.boxModel.html" />
+    <Content Include="widget\jQuery.browser.html" />
+    <Content Include="widget\jQuery.browser.version.html" />
+    <Content Include="widget\jQuery.callbacks.html" />
+    <Content Include="widget\jQuery.contains.html" />
+    <Content Include="widget\jQuery.cssHooks.html" />
+    <Content Include="widget\jQuery.data.html" />
+    <Content Include="widget\jQuery.each.html" />
+    <Content Include="widget\jQuery.error.html" />
+    <Content Include="widget\jQuery.extend.html" />
+    <Content Include="widget\jQuery.extend_object.html" />
+    <Content Include="widget\jQuery.fn.extend.html" />
+    <Content Include="widget\jQuery.fx.interval.html" />
+    <Content Include="widget\jQuery.fx.off.html" />
+    <Content Include="widget\jQuery.get.html" />
+    <Content Include="widget\jQuery.getJSON.html" />
+    <Content Include="widget\jQuery.getScript.html" />
+    <Content Include="widget\jQuery.grep.html" />
+    <Content Include="widget\jQuery.holdReady.html" />
+    <Content Include="widget\jquery.html" />
+    <Content Include="widget\jQuery.inArray.html" />
+    <Content Include="widget\jQuery.isArray.html" />
+    <Content Include="widget\jQuery.isEmptyObject.html" />
+    <Content Include="widget\jQuery.isFunction.html" />
+    <Content Include="widget\jQuery.isNumeric.html" />
+    <Content Include="widget\jQuery.isPlainObject.html" />
+    <Content Include="widget\jQuery.isWindow.html" />
+    <Content Include="widget\jQuery.makeArray.html" />
+    <Content Include="widget\jQuery.map.html" />
+    <Content Include="widget\jQuery.merge.html" />
+    <Content Include="widget\jquery.min.js" />
+    <Content Include="widget\jQuery.noConflict.html" />
+    <Content Include="widget\jQuery.noop.html" />
+    <Content Include="widget\jQuery.param.html" />
+    <Content Include="widget\jQuery.parseJSON.html" />
+    <Content Include="widget\jQuery.parseXML.html" />
+    <Content Include="widget\jQuery.post.html" />
+    <Content Include="widget\jQuery.proxy.html" />
+    <Content Include="widget\jQuery.sub.html" />
+    <Content Include="widget\jQuery.support.html" />
+    <Content Include="widget\jQuery.toArray.html" />
+    <Content Include="widget\jQuery.trim.html" />
+    <Content Include="widget\jQuery.type.html" />
+    <Content Include="widget\jQuery.unique.html" />
+    <Content Include="widget\jQuery.when.html" />
+    <Content Include="widget\jQuery_callback.html" />
+    <Content Include="widget\jQuery_html_ownerDocument.html" />
+    <Content Include="widget\jQuery_selector_context.html" />
+    <Content Include="widget\js.js" />
+    <Content Include="widget\keydown.html" />
+    <Content Include="widget\keypress.html" />
+    <Content Include="widget\keyup.html" />
+    <Content Include="widget\lang.html" />
+    <Content Include="widget\last.html" />
+    <Content Include="widget\lastChild.html" />
+    <Content Include="widget\lastOfType.html" />
+    <Content Include="widget\last_1.html" />
+    <Content Include="widget\length.html" />
+    <Content Include="widget\live.html" />
+    <Content Include="widget\load.html" />
+    <Content Include="widget\lt.html" />
+    <Content Include="widget\map.html" />
+    <Content Include="widget\mousedown.html" />
+    <Content Include="widget\mouseenter.html" />
+    <Content Include="widget\mouseleave.html" />
+    <Content Include="widget\mousemove.html" />
+    <Content Include="widget\mouseout.html" />
+    <Content Include="widget\mouseover.html" />
+    <Content Include="widget\mouseup.html" />
+    <Content Include="widget\multiple.html" />
+    <Content Include="widget\next.html" />
+    <Content Include="widget\nextAll.html" />
+    <Content Include="widget\nextUntil.html" />
+    <Content Include="widget\next_1.html" />
+    <Content Include="widget\not.html" />
+    <Content Include="widget\not_1.html" />
+    <Content Include="widget\nthChild.html" />
+    <Content Include="widget\nthLastChild.html" />
+    <Content Include="widget\nthLastOfType.html" />
+    <Content Include="widget\nthOfType.html" />
+    <Content Include="widget\odd.html" />
+    <Content Include="widget\off.html" />
+    <Content Include="widget\offset.html" />
+    <Content Include="widget\offsetParent.html" />
+    <Content Include="widget\on.html" />
+    <Content Include="widget\one.html" />
+    <Content Include="widget\onlyChild.html" />
+    <Content Include="widget\onlyOfType.html" />
+    <Content Include="widget\outerHeight.html" />
+    <Content Include="widget\outerWidth.html" />
+    <Content Include="widget\parent.html" />
+    <Content Include="widget\parents.html" />
+    <Content Include="widget\parentsUntil.html" />
+    <Content Include="widget\parent_1.html" />
+    <Content Include="widget\password.html" />
+    <Content Include="widget\position.html" />
+    <Content Include="widget\prepend.html" />
+    <Content Include="widget\prependTo.html" />
+    <Content Include="widget\prev.html" />
+    <Content Include="widget\prevAll.html" />
+    <Content Include="widget\prevUntil.html" />
+    <Content Include="widget\prop.html" />
+    <Content Include="widget\queue.html" />
+    <Content Include="widget\radio.html" />
+    <Content Include="widget\ready.html" />
+    <Content Include="widget\regexp.html" />
+    <Content Include="widget\remove.html" />
+    <Content Include="widget\removeAttr.html" />
+    <Content Include="widget\removeClass.html" />
+    <Content Include="widget\removeData.html" />
+    <Content Include="widget\removeProp.html" />
+    <Content Include="widget\replaceAll.html" />
+    <Content Include="widget\replaceWith.html" />
+    <Content Include="widget\reset.html" />
+    <Content Include="widget\resize.html" />
+    <Content Include="widget\root.html" />
+    <Content Include="widget\scroll.html" />
+    <Content Include="widget\scrollLeft.html" />
+    <Content Include="widget\scrollTop.html" />
+    <Content Include="widget\select.html" />
+    <Content Include="widget\selected.html" />
+    <Content Include="widget\selector.html" />
+    <Content Include="widget\serialize.html" />
+    <Content Include="widget\serializearray.html" />
+    <Content Include="widget\show.html" />
+    <Content Include="widget\siblings.html" />
+    <Content Include="widget\siblings_1.html" />
+    <Content Include="widget\size.html" />
+    <Content Include="widget\slice.html" />
+    <Content Include="widget\slideDown.html" />
+    <Content Include="widget\slideToggle.html" />
+    <Content Include="widget\slideUp.html" />
+    <Content Include="widget\stop.html" />
+    <Content Include="widget\style.css" />
+    <Content Include="widget\submit.html" />
+    <Content Include="widget\submit_1.html" />
+    <Content Include="widget\target.html" />
+    <Content Include="widget\text.html" />
+    <Content Include="widget\text_1.html" />
+    <Content Include="widget\toggle.html" />
+    <Content Include="widget\toggleClass.html" />
+    <Content Include="widget\trigger.html" />
+    <Content Include="widget\triggerHandler.html" />
+    <Content Include="widget\unbind.html" />
+    <Content Include="widget\undelegate.html" />
+    <Content Include="widget\unload.html" />
+    <Content Include="widget\unwrap.html" />
+    <Content Include="widget\val.html" />
+    <Content Include="widget\visible.html" />
+    <Content Include="widget\width.html" />
+    <Content Include="widget\wrap.html" />
+    <Content Include="widget\wrapAll.html" />
+    <Content Include="widget\wrapInner.html" />
+    <Content Include="widget\zfb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29187/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
