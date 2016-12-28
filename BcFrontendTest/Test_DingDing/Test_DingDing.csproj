@@ -66,6 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DingDing\本地存储json\19.js" />
+    <Content Include="DingDing\本地存储json\app-pre.js" />
+    <Content Include="DingDing\本地存储json\网络检测.jpg" />
     <Content Include="packages.config" />
     <Content Include="QQ\QQ_files\cdn_dianjiliu.js" />
     <Content Include="QQ\QQ_files\cdn_djl.js" />
@@ -78,6 +81,10 @@
     <Content Include="QQ\QQ_files\getface%285%29" />
     <Content Include="QQ\QQ_files\getface%286%29" />
     <Content Include="QQ\QQ_files\mq.js" />
+    <Content Include="DingDing\本地存储json\currentOrgData.json" />
+    <Content Include="DingDing\本地存储json\latest_user_info.json" />
+    <Content Include="DingDing\本地存储json\wkCloudSettingV2_49192224.json" />
+    <Content Include="DingDing\本地存储json\wk_wsurl.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

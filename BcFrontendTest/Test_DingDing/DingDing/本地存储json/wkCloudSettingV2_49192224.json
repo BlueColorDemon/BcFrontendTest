@@ -1,0 +1,317 @@
+{
+  "latestVersion": 77270750232,
+  "cloudSettings": {
+    "lang@wk_locale": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "zh_CN",
+      "moduleName": "wk_locale",
+      "domainId": "dingding",
+      "key": "lang"
+    },
+    "timezone_offset@user_settings": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "28800000",
+      "moduleName": "user_settings",
+      "domainId": "dingding",
+      "key": "timezone_offset"
+    },
+    "autolift@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{isAuto:1,conf:{method:1,delay:20,retry:10000}}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "autolift"
+    },
+    "oa_user@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1482850171359\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "oa_user"
+    },
+    "fun_control_android@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"0\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "fun_control_android"
+    },
+    "fun_control_ios@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1431946001767\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "fun_control_ios"
+    },
+    "org_screen@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1477499336980\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "org_screen"
+    },
+    "user_rights@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1466278877128\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "user_rights"
+    },
+    "team@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"scale\":50,\"lowerLimit\":6,\"popRate\":0,\"newFlow\":false}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "team"
+    },
+    "oa_jsapi@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1482733476879\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "oa_jsapi"
+    },
+    "push_options@user_settings": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"notification\":false,\"vibrate\":true,\"sound\":true}",
+      "moduleName": "user_settings",
+      "domainId": "dingding",
+      "key": "push_options"
+    },
+    "oa_activity@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"0\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "oa_activity"
+    },
+    "hpm_user@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1482806893291\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "hpm_user"
+    },
+    "org_team@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1465734087956\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "org_team"
+    },
+    "switch@wk_xpn": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "1",
+      "moduleName": "wk_xpn",
+      "domainId": "dingding",
+      "key": "switch"
+    },
+    "pdp_user@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1465282381347\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "pdp_user"
+    },
+    "mail@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"1459255290899\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "mail"
+    },
+    "notification_enabled@notification_settings": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "0",
+      "moduleName": "notification_settings",
+      "domainId": "dingding",
+      "key": "notification_enabled"
+    },
+    "im_settings@notification_settings": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"sound\":1,\"vibrate\":\"0\"}",
+      "moduleName": "notification_settings",
+      "domainId": "dingding",
+      "key": "im_settings"
+    },
+    "ding_settings@notification_settings": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"sound\":1,\"vibrate\":\"0\"}",
+      "moduleName": "notification_settings",
+      "domainId": "dingding",
+      "key": "ding_settings"
+    },
+    "show_detail@wk_xpn": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "0",
+      "moduleName": "wk_xpn",
+      "domainId": "dingding",
+      "key": "show_detail"
+    },
+    "ch_user@wk_phone": {
+      "effectScope": 0,
+      "openId": 49192224,
+      "settingValue": "{\"ver\":\"0\"}",
+      "moduleName": "wk_phone",
+      "domainId": "dingding",
+      "key": "ch_user"
+    },
+    "patchInfo;android_dingding_hotpatch;app;android;2.1.1.3;@hotpatch": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "invalid;invalid;0;invalid;",
+      "moduleName": "hotpatch",
+      "domainId": "dingding",
+      "key": "patchInfo;android_dingding_hotpatch;app;android;2.1.1.3;"
+    },
+    "patchInfo;android_dingding_hotpatch;app;android;2.4.0;@hotpatch": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "14;http://download.taobaocdn.com/wireless/dingtalk/null-21384-0/600000@hotpatch_14.apk;4684;9e743c889062154939c7a338f60942b9;",
+      "moduleName": "hotpatch",
+      "domainId": "dingding",
+      "key": "patchInfo;android_dingding_hotpatch;app;android;2.4.0;"
+    },
+    "video_switch_key@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "1",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "video_switch_key"
+    },
+    "settings@health": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "{\"power_day_threshold\":0.2,\"bg_traffic\":5242880,\"power_hour_threshold\":0.3,\"traffic_pattern\":2,\"total_traffic\":10485760}",
+      "moduleName": "health",
+      "domainId": "dingding",
+      "key": "settings"
+    },
+    "name_card_recognize@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "1",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "name_card_recognize"
+    },
+    "downgrade@wk_lwp": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "2",
+      "moduleName": "wk_lwp",
+      "domainId": "dingding",
+      "key": "downgrade"
+    },
+    "lwp_down@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "1",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "lwp_down"
+    },
+    "dt_phones@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "{\"name\":\"钉钉官方短信\",\"phones\":[\"106575258192144\",\"1065752551629604916\",\"10655059113144\",\"106906199604916\",\"106590256203144\",\"106904068039604916\"]}",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "dt_phones"
+    },
+    "conversation_cleanup_args@dt_function": {
+      "effectScope": 0,
+      "openId": 0,
+      "settingValue": "{\"maxVisibleCount\": 1000, \"maxCachedCount\": 2000, \"expirationTimeInDays\": 30}",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "conversation_cleanup_args"
+    },
+    "dt_create_team@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "{\"mediaId\":\"@lALOfONai80C0M0DhA\"}",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "dt_create_team"
+    },
+    "switch@dt_alimail": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "0",
+      "moduleName": "dt_alimail",
+      "domainId": "dingding",
+      "key": "switch"
+    },
+    "dt_group_strict_sync@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "{\"509550\":1,\"487984\":1}",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "dt_group_strict_sync"
+    },
+    "festival_red_packet@festivalRedEnvelop": {
+      "effectScope": 0,
+      "openId": 0,
+      "settingValue": "{\"startTime\":1482379200000,\"icon\":\"@lALOlIjGeFpa\",\"festivalPackage\":\"@lA_OlIjCfc47tmQkzgQzyLg\",\"title\":\"圣诞红包\",\"endTime\":1482767999000}",
+      "moduleName": "festivalRedEnvelop",
+      "domainId": "dingding",
+      "key": "festival_red_packet"
+    },
+    "open@goodTimeRedEnvelop": {
+      "effectScope": 0,
+      "openId": 0,
+      "settingValue": "0",
+      "moduleName": "goodTimeRedEnvelop",
+      "domainId": "dingding",
+      "key": "open"
+    },
+    "industry@dt_org": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "{\"promotion\": [103,104,105,106,107,108,109,110,111], \"invitation\": [103,104,105,106,107,108,109,110,111]}",
+      "moduleName": "dt_org",
+      "domainId": "dingding",
+      "key": "industry"
+    },
+    "lwp_down_all_v2@dt_function": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "1",
+      "moduleName": "dt_function",
+      "domainId": "dingding",
+      "key": "lwp_down_all_v2"
+    },
+    "open_lwp_login@win_native": {
+      "effectScope": 1,
+      "openId": 0,
+      "settingValue": "0",
+      "moduleName": "win_native",
+      "domainId": "dingding",
+      "key": "open_lwp_login"
+    }
+  }
+}
