@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="msg-content-wrapper" ng-switch="msgType">
+        
+        <!-- 文字内容 -->
+        <msg-text ng-switch-when="msg-text" info="info"></msg-text>
+        <!-- 图片内容 -->
+        <msg-img ng-switch-when="msg-img" info="info"></msg-img>
+        <!-- 图文内容 -->
+        <msg-img-text ng-switch-when="msg-img-text" info="info"></msg-img-text>
+        <!-- 语音内容 -->
+        <msg-voice ng-switch-when="msg-audio" info="info"></msg-voice>
+        <!-- 语VOIP内容 -->
+        <msg-voip ng-switch-when="msg-voip" info="info"></msg-voip>
+        <!-- 普通文件内容(旧数据) -->
+        <msg-file ng-switch-when="msg-file" info="info"></msg-file>
+        <!-- 分享内容 -->
+        <msg-share ng-switch-when="msg-share" info="info"></msg-share>
+        <!-- 名片内容 -->
+        <msg-card ng-switch-when="msg-card" info="info"></msg-card>
+        <!-- 邮件内容 -->
+        <msg-mail ng-switch-when="msg-mail" info="info"></msg-mail>
+        <!-- 云盘内容 -->
+        <msg-space-file ng-switch-when="msg-space-file" info="info"></msg-space-file>
+        <!-- 不支持消息内容 -->
+        <msg-err info="info" ng-switch-when="msg-err"></msg-err>
+        <!-- OA消息 -->
+        <msg-oa ng-switch-when="msg-oa" info="info"></msg-oa>
+        <!-- ding文字内容 -->
+        <ding-text ng-switch-when="ding-text" info="info"></ding-text>
+        <!-- ding语音内容 -->
+        <ding-voice ng-switch-when="ding-audio" info="info"></ding-voice>
+        <!-- 群公告 -->
+        <group-announce ng-switch-when="msg-announce" info="info"></group-announce>
+        <!-- 红包消息 -->
+        <msg-red-envelope ng-switch-when="msg-red-envelope" info="info"></msg-red-envelope>
+        <msg-need-decrypt ng-switch-when="msg-need-decrypt" info="info"></msg-need-decrypt>
+        <msg-encrypt-file ng-switch-when="msg-encrypt-file" info="info"></msg-encrypt-file>
+        <msg-encrypt-img ng-switch-when="msg-encrypt-img" info="info"></msg-encrypt-img>
+        <msg-encrypt-audio ng-switch-when="msg-encrypt-audio" info="info"></msg-encrypt-audio>
+        <encrypted-msg-in-web ng-switch-when="encrypted-msg-in-web"></encrypted-msg-in-web>
+        <msg-markdown info="info" ng-switch-when="msg-markdown"></msg-markdown>
+        <msg-err info="info" ng-switch-default></msg-err>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="header" class="login-header" ng-dblclick="login.onHeaderDblClick()">
+			<!-- 此dom不可变更 -->
+			<window-operations></window-operations>
+		</div>
+		<div id="body">
+			<div class="login-form tab login-tab">
+				<ul class="tab-items" ng-click="login.changeLanguage()">
+					<li class="tab-item" ng-class="{current:login.currentState===\'login.scanCodeLogin\'}" ui-sref=".scanCodeLogin">{{::login.text.scancode}}</li>
+					<li class="tab-item" ng-class="{current:login.currentState===\'login.passwordLogin\'}" ui-sref=".passwordLogin">{{::login.text.password}}</li>
+				</ul>
+				<div ui-view class="tab-contents"></div>
+			</div>
+			<div class="networkdetect" ng-click="login.networkdetect()">{{::login.text.abnormal}}</div>
+		</div>
+	</body>
+
+</html>

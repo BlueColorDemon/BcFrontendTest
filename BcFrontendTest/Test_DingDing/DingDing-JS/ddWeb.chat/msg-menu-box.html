@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div class="msg-menu-box" ng-show="msgMenu.showMenu"> <i class="iconfont ellipsis"></i>
+			<div class="tip-menu" ng-class="{down: !msgMenu.isUp, up: msgMenu.isUp}">
+				<div class="msg-menu-tri"> </div>
+				<ul class="menus">
+					<li class="menu-item" ng-repeat="item in msgMenu.Menu" ng-click="item.click()">{{item.text}}</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

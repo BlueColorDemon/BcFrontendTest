@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div ng-if="emailLogin" class="mail-container-wrap">
+			<mail-list is-proxy-mail="proxyMail" login-email="loginEmail" proxy-mail-url="proxyMailUrl"></mail-list>
+		</div>
+		<div ng-if="!emailLogin" class="mail-iframe-wrap" cmail-iframe></div>
+	</body>
+
+</html>

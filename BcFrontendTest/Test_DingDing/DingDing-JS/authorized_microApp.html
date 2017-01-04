@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="sub-menu-pannel" class="micro-app-list-pannel">
+			<dd-drop-down class="micro-app-selector" repeat-data="microApp.orgList" on-select="microApp.onOrgSelect" ng-model="microApp.currentOrg" ng-if="!microApp.isOnlyOneOrg">
+				<dd-drop-down-match class="eye selected-country"> <i class="iconfont title-icon">&#xe62e;</i> <span class="selector-panel-org-name">{{$selectItem.orgName}}</span> <i class="iconfont tri arrow">&#xe633;</i> </dd-drop-down-match>
+				<dd-drop-down-choices> <span>{{$repeatItem.orgName}}</span> </dd-drop-down-choices>
+			</dd-drop-down>
+			<ul class="list-with-icon-and-title micro-app-list" ng-class="{\'only-one-org\': microApp.isOnlyOneOrg}">
+				<div class="list-item">
+					<li class="list-item icro-app-item sub-list-item" ng-if="microApp.apps.length !== 0" ng-class="{\'active\': microApp.currentApp.agent === app.agent}" ng-repeat="app in microApp.apps" ng-click="microApp.onAppClick(app)">
+						<div class="item-wrapper micro-app-wrapper"> <img class="micro-app-icon-img" ng-src="{{app.iconUrl}}" /> <span class="item-title micro-app-name">{{app.name}}</span> </div>
+					</li>
+					<li class="micro-app-empty" ng-if="microApp.apps.length === 0">该企业暂无PC端支持的微应用</li>
+				</div>
+			</ul>
+		</div>
+		<div id="content-pannel">
+			<micro-app-container ng-if="!microApp.showDefaultPage" app-url="microApp.resultUrl"></micro-app-container>
+			<div class="content-pannel-body" ng-if="microApp.showDefaultPage">
+				<div class="micro-app-default-page">
+					<div class="micro-app-default-icon"></div>
+					<p class="micro-app-default-text"> <span>欢迎使用微应用，更多应用持续开发中，敬请期待！</span> </p>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

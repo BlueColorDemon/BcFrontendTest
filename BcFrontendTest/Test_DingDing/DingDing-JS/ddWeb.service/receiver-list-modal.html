@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="dialog middle receiver-list-modal">
+        <div class="head">
+            <i class="close iconfont"></i>
+            <div class="header"> {{mrlCtrl.title}} </div>
+        </div>
+        <div class="body">
+            <div class="ui list relaxed divided">
+                <span class="loading" ng-if="!mrlCtrl.dataReady">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </span>
+                <div ng-if="mrlCtrl.unConfirmedRec.length === 0" class="unreadList-all-read">全部已读</div>
+                <div ng-if="mrlCtrl.unConfirmedRec.length > 0 && mrlCtrl.unConfirmedRec.length !== 0" class="clearfix">
+                    <div>
+                        <span ng-if="!mrlCtrl.isMsg">未确认</span> <span ng-if="mrlCtrl.isMsg">未读</span> <span>({{mrlCtrl.unConfirmedRec.length}})</span>
+                        <a href="javascript:;" class="ding-again-btn" ng-click="mrlCtrl.dingAgain()" ng-if="!mrlCtrl.isMsg&&mrlCtrl.isShowDingAgain">再次提醒</a>
+                    </div>
+                    <div class="item-list clearfix">
+                        <div class="people" ng-repeat="item in mrlCtrl.unConfirmedRec" htitle="{{item.displayName}}{{item.status}}">
+                            <dd-avatar uid="item.user.userProfileModel.uid" ng-click="mrlCtrl.showUserProfile(item.user.userProfileModel.uid)" class="dinglist-tool-pointer"></dd-avatar>
+                            <div class="unconfirm-loading-box" ng-if="!mrlCtrl.isMsg && item.statusCode < 10&&mrlCtrl.isShowDingAgain"> <i class="close iconfont unconfirm-loading-btn">&#xe668;</i> </div>
+                            <p ng-bind-html="item.displayName|emoj"></p>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="mrlCtrl.confirmRec.length > 0 && mrlCtrl.unConfirmedRec.length !== 0">
+                    <div> <span ng-if="!mrlCtrl.isMsg">已确认</span> <span ng-if="mrlCtrl.isMsg">已读</span> <span>({{mrlCtrl.confirmRec.length}})</span> </div>
+                    <div class="item-list clearfix">
+                        <div class="people" ng-repeat="item in mrlCtrl.confirmRec" htitle="{{item.displayName}}">
+                            <dd-avatar uid="item.user.userProfileModel.uid" ng-click="mrlCtrl.showUserProfile(item.user.userProfileModel.uid)" class="dinglist-tool-pointer"></dd-avatar>
+                            <p ng-bind-html="item.displayName|emoj"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot"> <button class="blue" ng-show="!mrlCtrl.isShowDing" ng-click="mrlCtrl.close()">确定</button> <button class="blue" ng-show="mrlCtrl.isShowDing" ng-click="mrlCtrl.msgToDing()">DING一下</button> </div>
+    </div>
+</body>
+</html>

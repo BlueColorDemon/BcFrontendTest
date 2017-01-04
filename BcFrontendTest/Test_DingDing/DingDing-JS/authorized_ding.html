@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="sub-menu-pannel" class="ding-group-pannel">
+			<ul class="list-with-icon-and-title ding-groups">
+				<li class="list-item ding-group-item" ui-sref=".receive" ng-class="{\'active\':list.$state.is(\'authorized.ding.receive\')}" log=\ 'ding_tab_receive\'>
+					<div class="item-wrapper ding-group-wrapper"> <i class="iconfont my-received ding-list-icon">&#xe62c;</i> <span class="item-title ding-group-name">我收到的</span> <i class="iconfont unread-dot ding-unread-dot" ng-if="list.receiveList.hasNewComment">&#xe608;</i> </div>
+				</li>
+				<li class="list-item ding-group-item" ui-sref=".send" ng-class="{\'active\':list.$state.is(\'authorized.ding.send\')}" log=\ 'ding_tab_send\'>
+					<div class="item-wrapper ding-group-wrapper"> <i class="iconfont ding-list-icon">&#xe630;</i> <span class="item-title ding-group-name">我发出的</span> <i class="iconfont unread-dot ding-unread-dot" ng-if="list.sendList.hasNewComment">&#xe608;</i> </div>
+				</li>
+			</ul>
+		</div>
+		<div ui-view id="content-pannel"></div>
+	</body>
+
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="sub-menu-pannel" class="conv-list-pannel">
+			<free-call-list class="free-call-list-wrap"></free-call-list>
+		</div>
+		<div id="content-pannel">
+			<div>
+				<div class="content-pannel-head">
+					<ul class="telDial-videoConf-select-head">
+						<li ng-click="companyCallCenter.goTelDial()" ng-class="{\'font-color-change\':companyCallCenter.isTabOnVideo}">{{::companyCallCenter.text.pc_tel_dial_title}}
+							<div ng-hide="companyCallCenter.isTabOnVideo" class="tel-video-bar"></div>
+						</li>
+						<li ng-click="companyCallCenter.goVideoConf()" ng-class="{\'font-color-change\':!companyCallCenter.isTabOnVideo}">{{::companyCallCenter.text.pc_tel_conf_video}}
+							<div ng-show="companyCallCenter.isTabOnVideo" class="tel-video-bar"></div>
+						</li>
+					</ul>
+				</div>
+				<div ui-view class="telDial-videoConf-select-body"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -66,9 +66,60 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DingDing\本地存储json\19.js" />
+    <Content Include="DingDing-JS\19.js" />
+    <Content Include="DingDing-JS\869.js" />
+    <Content Include="DingDing-JS\app.js" />
+    <Content Include="DingDing-JS\BaseMsg\880.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\925.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\302.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\303.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\316.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\322.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\324.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\325.js" />
+    <Content Include="DingDing-JS\ddWeb.conv\329.js" />
+    <Content Include="DingDing-JS\lib\conversation\884.js" />
+    <Content Include="DingDing-JS\ddWeb.directive\104.js" />
+    <Content Include="DingDing-JS\ddWeb.directive\105.js" />
+    <Content Include="DingDing-JS\ddWeb.directive\convList.html" />
+    <Content Include="DingDing-JS\ddWeb.directive\convItem.html" />
+    <Content Include="DingDing-JS\lib\conversation\883.js" />
+    <Content Include="DingDing-JS\ddWeb.service\receiver-list-modal.html" />
+    <Content Include="DingDing-JS\dingtalk-windows-glue.js" />
+    <Content Include="DingDing-JS\authorized_im.html" />
+    <Content Include="DingDing-JS\authorized_ding.html" />
+    <Content Include="DingDing-JS\authorized_apiTest.html" />
+    <Content Include="DingDing-JS\authorized_microApp.html" />
+    <Content Include="DingDing-JS\authorized_companyCallCenter.html" />
+    <Content Include="DingDing-JS\authorized_cmail.html" />
+    <Content Include="DingDing-JS\login.html" />
+    <Content Include="DingDing-JS\login_scanCodeLogin.html" />
+    <Content Include="DingDing-JS\login_passwordLogin.html" />
+    <Content Include="DingDing-JS\authorized.html" />
+    <Content Include="DingDing-JS\authorized_cspace.html" />
+    <Content Include="DingDing-JS\authorized_contact.html" />
+    <Content Include="DingDing-JS\index-global.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\301.js" />
+    <Content Include="DingDing-JS\ddWeb.service\482.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\58.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\68.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\792.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\793.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\794.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\88.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\89.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\90.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\91.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\chat-box-new.html" />
+    <Content Include="DingDing-JS\ddWeb.chat\msg-menu-box.html" />
+    <Content Include="DingDing-JS\ddWeb.chat\msgbox.html" />
+    <Content Include="DingDing-JS\ddWeb.chat\msgContent.html" />
+    <Content Include="DingDing-JS\ddWeb.chat\unreadCount.html" />
+    <Content Include="DingDing-JS\ddWeb.service\modal\detector\472.js" />
+    <Content Include="DingDing-JS\ddWeb.service\modal\settingModal\495.js" />
     <Content Include="DingDing\本地存储json\app-pre.js" />
     <Content Include="DingDing\本地存储json\网络检测.jpg" />
+    <Content Include="DingDing\本地存储json\网络检测2.png" />
     <Content Include="packages.config" />
     <Content Include="QQ\QQ_files\cdn_dianjiliu.js" />
     <Content Include="QQ\QQ_files\cdn_djl.js" />
@@ -1250,7 +1301,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DingDing-JS\angular.js\" />
+    <Folder Include="DingDing-JS\filter\" />
+    <Folder Include="DingDing-JS\module\" />
+    <Folder Include="DingDing-JS\path\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

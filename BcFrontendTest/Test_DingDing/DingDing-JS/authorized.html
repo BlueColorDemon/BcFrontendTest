@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div id="layout-main" dingtalk-theme>
+        <div id="header" ng-dblclick="home.onHeaderDblClick($event)">
+            <window-operations></window-operations>
+            <upload-list htitle="{{::home.text.pc_menu_upload_download}}" htitle-offset="left"></upload-list>
+            <!-- <div class="call-entry" htitle="{{::home.text.dt_menu_tel_title}}" htitle-offset="left">            <unread-call></unread-call>            <i class="iconfont" ng-click="home.onTelClick()">&#xe6ef;</i>        </div> -->
+            <ding-box ng-if="home.showDingBox"></ding-box>
+            <search-bar2 support-activate-shortcut="true" ng-cloak></search-bar2>
+        </div>
+        <div id="body">
+            <div id="menu-pannel">
+                <!-- 此dom不可变更 -->
+                <div class="profile">
+                    <user-avatar class="big-52 with-border" uid="{{ home.$my.userProfileModel.uid }}" open-profile="1"></user-avatar>
+                    <div class="connecting-bar">
+                        <div class="connecting-bar-inner" ng-if="home.login_state === 1">
+                            <div class="connecting-icon error"></div> <span class="connecting-tip">{{::home.text.pc_main_panel_connecting}}</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="main-menus">
+                    <li class="menu-item menu-message" ng-click="home.goState(\'authorized.im\')" ng-class="{selected:home.$state.includes(\'authorized.im\')}" ng-dblclick="home.scrollToUnReadConv()">
+                        <div class="menu-item-content">
+                            <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_conversation_title}}" htitle-direction="right"></i>
+                            <all-conv-unread-count></all-conv-unread-count>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-ding" ng-click="home.goState(\'authorized.ding\')" ng-class="{selected:home.$state.includes(\'authorized.ding\')}">
+                        <div class="menu-item-content"> <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_ding_title}}" htitle-direction="right"></i> <span class="unread-num ding-unread-num" ng-if="home.receiveList.newCount!==0"><em>{{home.receiveList.newCount}}</em></span> <i ng-if="home.receiveList.newCount===0&&(home.receiveList.hasNewComment||home.sendList.hasNewComment)" class="iconfont unread-dot ding-unread-dot">&#xe608;</i> </div>
+                    </li>
+                    <li class="menu-item menu-company-call-center" ng-click="home.onTelClick()" ng-class="{selected:home.$state.includes(\'authorized.companyCallCenter\')}">
+                        <div class="menu-item-content">
+                            <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_tel_title}}" htitle-direction="right"></i>
+                            <unread-call></unread-call>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-contact" ng-click="home.onContactClick()" ng-class="{selected:home.$state.includes(\'authorized.contact\')}">
+                        <div class="menu-item-content"> <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_contact_title}}" htitle-direction="right"></i> </div>
+                    </li>
+                    <li class="menu-item menu-micro-app" ng-if="home.isShowMicroApp && !home.ua.isDesktop || home.isShowMicroApp && home.ua.isDesktop && !home.isShowWorkIndependent" ng-click="home.onMicroAppClick()" ng-class="{selected:home.$state.includes(\'authorized.microApp\')}">
+                        <div class="menu-item-content"> <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_work_title}}" htitle-direction="right"></i> </div>
+                    </li>
+                    <li class="menu-item menu-micro-app" ng-if="home.ua.isDesktop && home.isShowMicroApp && home.isShowWorkIndependent" ng-click="home.openWork()" ng-class="{selected: home.workOpenState }">
+                        <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_work_title}}" htitle-direction="right"></i>
+                    </li>
+                    <li class="menu-item menu-cspace" ng-click="home.goState(\'authorized.cspace\')" ng-class="{selected:home.$state.includes(\'authorized.cspace\')}" log="tab_space_click">
+                        <div class="menu-item-content">
+                            <i class="iconfont menu-icon" htitle="{{::home.text.dt_menu_space_title}}" htitle-direction="right"></i>
+                            <unread-cspace></unread-cspace>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="extra-options">
+                    <div class="extra-options-inner">
+                        <org-email></org-email>
+                        <li class="extra-item more-actions">
+                            <div function-menu></div>
+                        </li>
+                        <org-admin></org-admin>
+                        <li class="extra-item settings">
+                            <div setting-menu></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div ui-view id="menu-pannel-body"></div>
+        </div>
+    </div>
+</body>
+</html>

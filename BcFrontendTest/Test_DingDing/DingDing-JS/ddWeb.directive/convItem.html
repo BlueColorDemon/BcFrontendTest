@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="list-item conv-item context-menu" ng-class="{\'active\' : convItem.convListObj.activeConvId === convItem.convId,\'pin\':convItem.conv.baseConversation.sort > 0,\'notice-mute\': convItem.conv.notificationOff,\'conv-item-company\':convItem.conv.baseConversation.tag===convItem.ConvType.COMPANY_GROUP || convItem.conv.baseConversation.tag===convItem.ConvType.ENCRYPT_CHAT,\'safety-item\': convItem.conv.isSafety}" context-menu menu-data="{{convItem.conv.convId}}" menu-item-get="convItem.getMenuItem" menu-item-click="convItem.onMenuItemClick">
+        <i class="iconfont icon-delete-conv" htitle="删除会话" htitle-direction="left" ng-click="convItem.hideConv(convItem.conv.convId,$event)">
+            &#xe632;
+        </i>
+        <div class="avatar-wrap">
+            <group-avatar cid="{{:: convItem.conv.convId }}"></group-avatar>
+        </div>
+        <i class="icon-safety-avatar" ng-show="convItem.conv.isSafety"></i>
+        <div class="conv-item-content">
+            <divf class="title-wrap info">
+                <div class="name-wrap">
+                    <p class="name" ng-bind-html="convItem.conv.baseConversation.title|emoj"></p>
+                    <i class="icon-company" ng-if="::convItem.conv.isCompanyGroup" ng-class="{\'icon-dept-company\':convItem.conv.isDeptGroup ,\'icon-all-user-company\': convItem.conv.isAllUserGroup}"></i>
+                </div>
+                <span class="time">{{convItem.conv.updateTime|dateTime}}</span>
+            </divf>
+            <div class="latest-msg-info">
+                <p class="latest-msg">
+                    <span ng-show="convItem.conv.remindType" class="highlight">{{convItem.RemindText[convItem.conv.remindType]}}</span>
+                    <span ng-show="convItem.isShowMsgCount()" ng-bind-html="\'[\' + (convItem.conv.newMsg)+\'条]\'"></span> 
+                    <span ng-bind-html="convItem.conv.lastMessageContent|emoj"></span>
+                </p>
+                <div class="noti">
+                    <i class="iconfont icon-conv-mute" ng-show="convItem.conv.notificationOff">&#xe605;</i>
+                    <span class="unread-num" ng-if="convItem.conv.newMsg">
+                        <em ng-show="!convItem.conv.notificationOff">{{convItem.conv.newMsg}}</em>
+                        <em ng-show="convItem.conv.notificationOff"></em>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

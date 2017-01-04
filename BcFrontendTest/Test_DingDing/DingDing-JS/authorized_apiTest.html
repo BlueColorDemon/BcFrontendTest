@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="sub-menu-pannel">
+			<h4>API Test</h4>
+			<!--<form ng-submit="apiTest.submitTestUrl()" style="padding:12px">--><input type="text" ng-model="apiTest.testUrl" style="margin-bottom:8px" /> <button class="button small" ng-click="apiTest.submitTestUrl();">打开</button>
+			<!--</form>-->
+		</div>
+		<div id="content-pannel">
+			<micro-app-container app-url="apiTest.resultUrl"></micro-app-container>
+		</div>
+	</body>
+
+</html>

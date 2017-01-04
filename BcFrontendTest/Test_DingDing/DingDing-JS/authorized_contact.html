@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="sub-menu-pannel" class="contact-group-pannel">
+			<div class="org-list-pannel" ng-if="contact.isShowArchContact">
+				<div class="sub-menu-list">
+					<organization-list org-state="contact.orgState" on-change-dept="contact.changeDept(orgState)"></organization-list>
+				</div>
+			</div>
+			<ul class="list-with-icon-and-title contact-groups">
+				<li class="list-item contact-group-item" ng-class="{active:contact.currentState==\'authorized.contact.friend\'}" ui-sref=".friend" log=\ 'contact_myfriend_button_click\'>
+					<div class="item-wrapper"> <i class="iconfont">&#xe627;</i> <span class="item-title group-name">{{::contact.text.pc_contact_my_friends}}</span> </div>
+				</li>
+				<li class="list-item contact-group-item" ng-class="{active:contact.currentState==\'authorized.contact.group\'}" ui-sref=".group" log=\ 'contact_group_button_click\'>
+					<div class="item-wrapper"> <i class="iconfont">&#xe60d;</i> <span class="item-title group-name">{{::contact.text.pc_contact_my_groups}}</span> </div>
+				</li>
+				<li class="list-item contact-group-item" ng-class="{active:contact.currentState==\'authorized.contact.follow\'}" ui-sref=".follow" log=\ 'contact_group_button_click\'>
+					<div class="item-wrapper"> <i class="iconfont follow-icon">&#xe662;</i> <span class="item-title group-name">{{::contact.text.pc_contact_my_concern}}</span> </div>
+				</li>
+			</ul>
+		</div>
+		<div id="content-pannel" ui-view ng-if="contact.currentState !== \'authorized.contact\'"></div>
+		<div id="content-pannel" ng-if="contact.currentState === \'authorized.contact\'">
+			<div class="org-detail-pannel">
+				<div class="content-pannel-head">
+					<p class="head-title org-name">{{contact.orgData.orgDetail.orgName}}</p>
+					<div class="head-operations contact-operations" ng-if="contact.leavePermission === true" ng-click="contact.onQuitClick()"> <span class="operation">                    <i class="iconfont" htitle="{{contact.btnText}}" htitle-offset="left">&#xe645;</i>                </span> </div>
+				</div>
+				<org-list org-state="contact.orgState" on-change-dept="contact.changeDept(orgState)" class="content-pannel-body"></org-list>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="chat-box-new">
+        <div class="main-chat chat-items" img-preview infinite-scroll infinite-scroll-top="pullHistory();" infinite-scroll-threshold="5" watermark watermark-location="{{watermarkLocation.GROUP}}" org-id="{{orgId}}" is-safety="{{conv.isSafety}}" is-safety-single="{{conv.isSafetySingle}}">
+            <div class="msg-items">
+                <msg-box ng-repeat="info in msgInfoList track by info.msg._localId" info="info" is-safety="conv.isSafety" class="msg-box"></msg-box>
+            </div>
+        </div>
+        <a href="javascript:;" style="" class="new-chat-reminder" ng-show="hasNewMsg" ng-click="scrollToBottom()"> <span>您有新消息</span> </a>
+    </div>
+</body>
+</html>

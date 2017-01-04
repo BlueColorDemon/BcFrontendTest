@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div style="display: none;">
+			<!-- 普通消息 -->
+			<div class="chat-item" ng-if="msg.info.msg.baseMessage.creatorType===1 && msg.info.msg.isDisplay()" ng-class="{\'me\':!msg.info.position, \'not-me\':msg.info.position, \'responsive-box\': msg.isResponsiveBox}" msg-id="{{msg.info.msg.getId()}}">
+				<!-- OA消息，不显示chat-time -->
+				<div class="chat-status" ng-show="msg.showTime">{{::msg.showTime | dateTime:true}}</div>
+				<div class="chat-profile-info clearfix" ng-class="{\'img-text-msg-display-none\': msg.info.type === ContentType.IMG_TEXT}">
+					<profile ng-if="::!msg.info.isOAConv && !msg.info.msg.isMySend()" cid="msg.info.msg.getConvId()" uid="msg.info.uid"></profile> <span class="chat-time" ng-class="{\'oa-chat-time\':msg.info.isOAConv, \'my-send-time\': msg.info.msg.isMySend()}">{{msg.info.msg.baseMessage.createdAt | dateTime:true:true}}</span>
+				</div>
+				<div class="clearfix content-area" ng-class="{\'img-text-msg\': msg.info.type === ContentType.IMG_TEXT}">
+					<div class="avatar">
+						<user-avatar class="normal" uid="{{msg.info.uid}}" open-profile="1"></user-avatar>
+					</div>
+					<user-ding-title-list just-show-main uid="{{msg.info.uid}}" class="user-ding-title-list" open-profile ng-class="{\'msg-left-title\':!msg.info.msg.isMySend(),\'msg-right-title\':msg.info.msg.isMySend()}"></user-ding-title-list>
+					<div class="msg-bubble-box">
+						<div ng-class="{\'safety-bubble\': msg.info.msg.isDecrypted() && isSafety && msg.ua.isDesktop}" htitle="{{::msg.TEXT.dt_message_tap_safe_icon_alert}}" htitle-direction="right" ng-if="msg.info.position"></div>
+						<div ng-class="{\'safety-bubble\': msg.info.msg.isDecrypted() && isSafety && msg.ua.isDesktop}" htitle="{{::msg.TEXT.dt_message_tap_safe_icon_alert}}" htitle-direction="left" ng-if="!msg.info.position"></div>
+						<div class="msg-bubble-area">
+							<msg-content info="msg.info"></msg-content>
+							<!-- 消息菜单 -->
+							<msg-menu msg="msg.info.msg" is-special-conv="msg.info.isSpecialConv" ng-if="msg.info.msg.sendStatus===SendStatus.SENDED&&msg.shouldShowMsgMenu"></msg-menu>
+							<!-- 普通消息有未读状态 -->
+							<unread-count msg="msg.info.msg" ng-if="msg.shouldShowUnreadCount"></unread-count>
+							<!-- ding消息有确认状态 -->
+							<un-confirm-count msg="msg.info.msg" ng-if="msg.info.msg.baseMessage.memberTag===2&&!msg.info.position&&msg.info.msg.isDingContentType()"></un-confirm-count>
+							<!-- 重发按钮 -->
+							<a href="#" ng-click="msg.resend()" ng-if="msg.info.msg.sendStatus===SendStatus.SENDFAIL"><i class="iconfont icon-resend">&#xe63c;</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 系统消息 -->
+			<div ng-if="::msg.info.msg.baseMessage.creatorType===2" class="chat-status chat-system-notice" ng-class="{\'safety-tips\': msg.isSafetyTips}" ng-bind-html="msg.getSysMsg()"></div>
+			<msg-recalled msg="msg.info.msg" ng-if="msg.info.msg.baseMessage.recallStatus === 1"></msg-recalled>
+		</div>
+	</body>
+
+</html>
