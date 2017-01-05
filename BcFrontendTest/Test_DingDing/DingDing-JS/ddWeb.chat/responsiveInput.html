@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div class="send-msg-box-wrapper" layout-resize="input.layoutResizeObj.direction" max-height="input.layoutResizeObj.maxHeight" min-height="input.layoutResizeObj.minHeight" storage-key="input.layoutResizeObj.storageKey" on-resizing="input.layoutResizeObj.onResizing()">
+			<div class="input-area">
+				<div tool-bar input="input" conv="conv" disable="input.disableToolBar" add-at="addAt"></div> <span class="user-guide" ng-if="!input.isShowInputTip">{{ hintText }}</span>
+				<div class="msg-box"> <textarea class="textarea input-msg-box" dd-paste ng-trim="false" at-input cursor-adjust typing focus="input.msgInputFocus"></textarea> </div>
+			</div>
+			<div class="action-area">
+				<a href="javascript:;" class="send-message-button disabled">{{::input.text.dt_chatbox_common_send}} <i ng-if="conv.isSafety" class="send-msg-safety-icon"></i></a>
+			</div>
+		</div>
+	</body>
+
+</html>

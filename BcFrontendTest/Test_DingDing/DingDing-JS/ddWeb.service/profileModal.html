@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div class="profile-card">
+			<header class="header">
+				<div class="bg" ng-class="{\'default-bg-img\':!profileModal.user.userProfileModel.avatarMediaId,\'user-bg-img\':profileModal.user.userProfileModel.avatarMediaId}" style="background-image:url({{profileModal.avatarUrl}})"></div> <i class="iconfont close dialog-close"></i>
+				<div class="avatar-wrap">
+					<user-avatar ng-if="profileModal.uid" on-click-avatar="profileModal.onClickAvatar()" class="big" uid="{{ profileModal.uid }}"></user-avatar>
+					<static-user-avatar ng-if="!profileModal.uid" on-click-avatar="profileModal.onClickAvatar()" class="big" media-id="{{profileModal.user.userProfileModel.avatarMediaId}}" name="{{profileModal.user.userProfileModal.nick || profileModal.user.extContact.orgEmployeeModel.orgUserName}}"></static-user-avatar>
+				</div>
+				<div class="detail-info" ng-class="{\'has-user-ding-title\':profileModal.userInstance.dingTitles.length}">
+					<div class="name" title=""><span ng-bind-html="((!profileModal.user.userProfileModel.isDataComplete?profileModal.card.name:\'\') ||profileModal.user.remarkNameObj.alias||profileModal.user.userProfileModel.nick || profileModal.user.extContact.orgEmployeeModel.orgUserName)|emoj"></span></div> <i class="iconfont icon-org" ng-if="profileModal.user.userProfileModel.isOrgUser"></i> <i class="iconfont icon-follow" htitle="{{profileModal.followMsg}}" ng-class="{\'follow\':profileModal.userInstance.isFollowing,\'unfollow\':!profileModal.userInstance.isFollowing}" ng-click="profileModal.toggleFollow()" ng-if="profileModal.showFollow && profileModal.uid"></i> <i class="iconfont icon-card" ng-if="profileModal.user.userProfileModel" htitle="{{::\'dt_profile_send_card\'|i18next}}" ng-click="profileModal.sendCardToConv()">&#xe6ae;</i> </div>
+				<div class="ding-title-container" ng-if="profileModal.userInstance.dingTitles.length">
+					<user-ding-title-list uid="{{profileModal.uid}}"></user-ding-title-list>
+				</div>
+				<div class="certification" ng-if="profileModal.showCertification" title="{{profileModal.certificationTitle}}">{{::\'dt_profile_dingtalk_auth\'|i18next}}{{profileModal.certificationTitle}}</div> <button class="button add-friend" ng-if="profileModal.uid && profileModal.user.userPermissionModel.canBeSendFriendRequest && (profileModal.user.friendRequestModel.status === profileModal.FriendType.NON_RELATION||profileModal.user.friendRequestModel.status === profileModal.FriendType.PHONE_RELATION)" ng-click="profileModal.openRequestFriend()">{{::\'dt_profile_add_friend\'|i18next}}</button> <button class="button red del-friend" ng-if="profileModal.uid &&profileModal.user.friendRequestModel.status === profileModal.FriendType.FRIEND" ng-click="profileModal.removeFriend()">{{::\'dt_profile_remove_friend\'|i18next}}</button> <button class="button disabled" ng-if="profileModal.uid && profileModal.user.friendRequestModel.status === profileModal.FriendType.HAVE_SEND_FRIEND_REQUEST">{{::\'dt_profile_request_friend\'|i18next}}</button> <button class="button add-friend" ng-if="profileModal.uid && profileModal.user.friendRequestModel.status === profileModal.FriendType.RECEIVE_FRIEND_REQUEST" ng-click="profileModal.acceptFriend($event)">{{::\'dt_profile_accept_friend\'|i18next}}</button> </header>
+			<article class="detail-content">
+				<loading ng-hide="!profileModal.isLoading"></loading>
+				<section ng-hide="profileModal.isLoading" class="detail-box" ng-repeat="orgData in profileModal.user.orgEmployees" ng-if="orgData.orgEmployeeModel" watermark watermark-location="{{profileModal.watermarkLocation.CONTACT}}" watermark-type="{{profileModal.watermarkTypeKey.SMALL}}" org-id="{{orgData.orgEmployeeModel.orgId}}">
+					<h5 class="box-title">{{orgData.orgEmployeeModel.orgName}}</h5>
+					<dl class="box-item"> <dt class="label" htitle="{{::\'dt_profile_name\'|i18next}}">{{::\'dt_profile_name\'|i18next}}</dt>
+						<dd class="cnt">{{orgData.orgEmployeeModel.orgUserName}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="profileModal.hideMobileNumber(orgData.orgEmployeeModel.orgUserMobile);"> <dt class="label" htitle="{{::\'dt_profile_phone\'|i18next}}">{{::\'dt_profile_phone\'|i18next}}</dt>
+						<dd class="cnt">+{{orgData.orgEmployeeModel.stateCode}}-{{profileModal.hideMobileNumber(orgData.orgEmployeeModel.orgUserMobile)}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="!profileModal.hideMobileNumber(orgData.orgEmployeeModel.orgUserMobile) && orgData.orgEmployeeModel.orgUserMobileDesensitize"> <dt class="label" htitle="{{::\'dt_profile_phone\'|i18next}}">{{::\'dt_profile_phone\'|i18next}}</dt>
+						<dd class="cnt">{{orgData.orgEmployeeModel._orgEmpMobile || orgData.orgEmployeeModel.orgUserMobileDesensitize}}</dd>
+						<dd class="cnt show-number" ng-if="!orgData.orgEmployeeModel._orgEmpMobile">
+							<a ng-class="{\'disabled\':orgData._tryShowing}" href="#" ng-click="profileModal.showUserOrgEmpMobile(orgData)">点击查看</a>
+						</dd>
+					</dl>
+					<dl class="box-item" ng-if="orgData.orgEmployeeModel.orgAuthEmail || orgData.orgEmployeeModel.orgEmail"> <dt class="label" htitle="{{::\'dt_profile_email\'|i18next}}">{{::\'dt_profile_email\'|i18next}}</dt>
+						<dd class="cnt">
+							<a href="mailto:{{orgData.orgEmployeeModel.orgAuthEmail || orgData.orgEmployeeModel.orgEmail}}">{{orgData.orgEmployeeModel.orgAuthEmail || orgData.orgEmployeeModel.orgEmail}}</a>
+						</dd>
+					</dl>
+					<dl class="box-item" ng-if="orgData.orgEmployeeModel.orgMasterDisplayName"> <dt class="label" htitle="{{::\'dt_profile_master\'|i18next}}">{{::\'dt_profile_master\'|i18next}}</dt>
+						<dd class="cnt">{{orgData.orgEmployeeModel.orgMasterDisplayName}}</dd>
+					</dl>
+					<dl class="box-item" ng-repeat="orgNodeItem in orgData.orgNodeItemList"> <dt class="label" htitle="{{::\'dt_profile_dept\'|i18next}}">{{::\'dt_profile_dept\'|i18next}}</dt>
+						<dd class="cnt">
+							<a href="#" ng-click="profileModal.goApartment(orgData.orgDetail.orgId,orgNodeItem.deptId)">{{orgNodeItem.dept.deptName || orgData.orgEmployeeModel.depts[$index].deptName}}</a>
+						</dd>
+					</dl>
+					<dl class="box-item" ng-repeat="item in orgData.orgExtPropertyList" class="item" ng-show="item.itemValue && item.itemValue.length > 0"> <dt class="label" htitle="{{item.itemName}}">{{item.itemName}}</dt>
+						<dd class="cnt">{{item.itemValue}}</dd>
+					</dl>
+				</section>
+				<section ng-hide="profileModal.isLoading" class="detail-box" ng-if="profileModal.showCustomerContact">
+					<h5 class="box-title">{{::\'dt_profile_customer_info\'|i18next}}</h5>
+					<dl class="box-item" ng-repeat="item in profileModal.crmContact track by $index" ng-if="item.itemValue"> <dt class="label">{{item.itemName}}</dt>
+						<dd class="cnt">{{item.itemValue}}</dd>
+					</dl>
+				</section>
+				<section ng-hide="profileModal.isLoading" class="detail-box" ng-if="profileModal.showExternalContact" watermark watermark-location="{{profileModal.watermarkLocation.CONTACT}}" watermark-type="{{profileModal.watermarkTypeKey.SMALL}}" org-id="{{profileModal.user.extContact.orgEmployeeModel.orgId}}" ng-repeat="extContact in profileModal.user.extContacts">
+					<h5 class="box-title">{{::\'dt_profile_external_contacts\'|i18next}}<span ng-if="profileModal.user.extContacts.length > 1">-{{extContact.orgEmployeeModel.orgName}}</span></h5>
+					<dl class="box-item"> <dt class="label" htitle="{{::\'dt_profile_name\'|i18next}}">{{::\'dt_profile_name\'|i18next}}</dt>
+						<dd class="cnt">{{extContact.orgEmployeeModel.orgUserName}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="profileModal.hideMobileNumber(extContact.orgEmployeeModel.orgUserMobile);"> <dt class="label" htitle="{{::\'dt_profile_phone\'|i18next}}">{{::\'dt_profile_phone\'|i18next}}</dt>
+						<dd class="cnt">+{{extContact.orgEmployeeModel.stateCode}}-{{profileModal.hideMobileNumber(extContact.orgEmployeeModel.orgUserMobile)}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="extContact.orgEmployeeModel.orgEmail"> <dt class="label" htitle="{{::\'dt_profile_email\'|i18next}}">{{::\'dt_profile_email\'|i18next}}</dt>
+						<dd class="cnt">
+							<a href="mailto:{{profileModal.user.extContact.orgEmployeeModel.orgEmail}}">{{extContact.orgEmployeeModel.orgEmail}}</a>
+						</dd>
+					</dl>
+					<dl class="box-item" ng-if="extContact.orgEmployeeModel.deptName"> <dt class="label" htitle="{{::\'dt_profile_dept\'|i18next}}">{{::\'dt_profile_dept\'|i18next}}</dt>
+						<dd class="cnt">{{extContact.orgEmployeeModel.deptName}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="extContact.orgEmployeeModel.companyName"> <dt class="label" htitle="{{::\'dt_profile_company\'|i18next}}">{{::\'dt_profile_company\'|i18next}}</dt>
+						<dd class="cnt">{{extContact.orgEmployeeModel.companyName}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="extContact.orgEmployeeModel.orgTitle"> <dt class="label" htitle="{{::\'dt_profile_title\'|i18next}}">{{::\'dt_profile_title\'|i18next}}</dt>
+						<dd class="cnt">{{extContact.orgEmployeeModel.orgTitle}}</dd>
+					</dl>
+					<dl class="box-item" ng-if="extContact.remark"> <dt class="label" htitle="{{::\'dt_profile_remark\'|i18next}}">{{::\'dt_profile_remark\'|i18next}}</dt>
+						<dd class="cnt">{{extContact.remark}}</dd>
+					</dl>
+					<dl class="box-item can-click" ng-click="profileModal.showOneBox()" ng-if="extContact.followRecordsBrief"> <dt class="label" htitle="{{::\'dt_profile_one_box\'|i18next}}">{{::\'dt_profile_one_box\'|i18next}}</dt>
+						<dd class="cnt">{{::\'dt_profile_one_box_detail\'|i18next:{value1:extContact.followRecordsBrief.totalCount || 0, value2:extContact.noFollowDay } }}</dd> <i class="iconfont right-arrow"></i> </dl>
+					<dl class="box-item" ng-click="profileModal.onClickLabel(extContact)" ng-if="extContact.orgEmployeeModel.labels && extContact.orgEmployeeModel.labels.length > 0"> <dt class="label" htitle="{{::\'dt_profile_tag\'|i18next}}">{{::\'dt_profile_tag\'|i18next}}</dt>
+						<dd class="cnt">
+							<ext-contact-label ng-repeat="label in extContact.orgEmployeeModel.labels" color="label.color" text="label.name"></ext-contact-label>
+						</dd> <i class="iconfont right-arrow"></i> </dl>
+					<dl class="box-item can-click" ng-if="extContact.bizCardMediaId" ng-click="profileModal.previewImg(extContact.bizCardMediaId)"> <dt class="label" htitle="{{::\'dt_profile_card\'|i18next}}">{{::\'dt_profile_card\'|i18next}}</dt>
+						<dd class="cnt">{{::\'dt_profile_check_picture\'|i18next}}</dd> <i class="iconfont right-arrow"></i> </dl>
+					<dl class="box-item can-click" ng-click="profileModal.openPermissionManage(extContact)"> <dt class="label" htitle="{{::\'dt_profile_permission\'|i18next}}">{{::\'dt_profile_permission\'|i18next}}</dt>
+						<dd class="cnt"> <span ng-if="extContact.follower.orgEmployeeModel.orgUserName">{{::\'dt_profile_owner\'|i18next:{value1: extContact.follower.orgEmployeeModel.orgUserName} }}</span> <span ng-if="!extContact.follower.orgEmployeeModel.orgUserName">{{::\'dt_profile_permission_no_one\'|i18next}}</span> <span ng-if="extContact.permisstionCoWorkerNum!==0 || extContact.permisstionDeptNum!==0">{{::\'dt_profile_permission_share_info\'|i18next:{value1: extContact.permisstionCoWorkerNum, value2: extContact.permisstionDeptNum} }}</span> </dd> <i ng-if="extContact.permisstionCoWorkerNum!==0 || extContact.permisstionDeptNum!==0" class="iconfont right-arrow"></i> </dl>
+					<dl class="box-item" ng-repeat="item in extContact.orgExtPropertyList track by item.itemName" ng-show="item.itemValue"> <dt class="label" htitle="{{item.itemName}}">{{item.itemName}}</dt>
+						<dd class="cnt">{{item.itemValue}}</dd>
+					</dl>
+				</section>
+				<section class="detail-box" ng-hide="profileModal.isLoading || !profileModal.uid">
+					<h5 class="box-title">{{::\'dt_profile_personal_info\'|i18next}}</h5>
+					<dl class="box-item"> <dt class="label">{{::\'dt_profile_nick\'|i18next}}</dt>
+						<dd class="cnt"> <span ng-bind-html="profileModal.user.userProfileModel.nick|emoj"></span> <span class="unactived" ng-if="!profileModal.user.userProfileModel.isActive">{{::\'dt_profile_not_active\'|i18next}}</span> </dd>
+					</dl>
+					<dl class="box-item" ng-if="profileModal.showRemarkEdit"> <dt class="label">{{::\'dt_profile_remark\'|i18next}}</dt>
+						<edit-bar is-edit-bar-open="profileModal.isEditBarOpen" custom-value="profileModal.userInstance.remarkNameObj.alias" default-value="profileModal.userInstance.userProfileModel.nick" save-action="profileModal.saveRemarkName"></edit-bar>
+					</dl>
+					<dl class="box-item" ng-if="profileModal.user.userProfileModel.city"> <dt class="label">{{::\'dt_profile_region\'|i18next}}</dt>
+						<dd class="cnt">{{profileModal.user.userProfileModel.city}}</dd>
+					</dl>
+				</section>
+			</article>
+			<footer class="footer">
+				<div class="actions-wrapper" ng-show="!profileModal.isOpenAddFriend && (profileModal.user.userPermissionModel.canBeSentMsg || profileModal.showChatCall || profileModal.showSendDing)">
+					<a href="javascript:;" class="footer-item send-msg chatto-action-btn" ng-click="profileModal.chatTo(profileModal.user.userProfileModel.uid,$event)" ng-class="{\'disabled\':!profileModal.user.userPermissionModel.canBeSentMsg}"> <i class="iconfont">&#xe61c;</i><span>{{::\'dt_profile_send_message\'|i18next}}</span> </a>
+					<a href="javascript:;" class="footer-item free-call" ng-click="profileModal.createCall()" ng-class="{\'disabled\':!profileModal.showChatCall}"> <i class="iconfont">&#xe6ef;</i><span>{{::\'dt_profile_dingtalk_call\'|i18next}}</span> </a>
+					<a href="javascript:;" class="footer-item send-ding" ng-click="profileModal.sendDing()" ng-class="{\'disabled\':!profileModal.showSendDing}"> <i class="iconfont">&#xe6e5;</i><span>{{::\'dt_profile_send_ding\'|i18next}}</span> </a>
+				</div>
+				<div class="add-friend-wrapper" ng-show="profileModal.isOpenAddFriend">
+					<p class="des">{{::\'dt_profile_input_friend_explain\'|i18next}}
+						<a href="javascript:void(0)" class="profile-addFriend-back" ng-click="profileModal.closeRequestFriend();">{{::\'dt_common_back\'|i18next}}</a>
+					</p> <input type="text" class="input req-msg" placeholder="{{::\'dt_profile_input_friend_explain\'|i18next}}" ng-model="profileModal.addFriendInfo" focus="profileModal.focusOnAddFriendInfo" /> <button class="send-friend-req add-friend-btn" ng-class="{disabled:profileModal.isAdding || !profileModal.addFriendInfo}" ng-click="profileModal.sendFriend(profileModal.user.userProfileModel.uid,$event)">{{::\'dt_common_send\'|i18next}}</button> </div>
+			</footer>
+		</div>
+	</body>
+
+</html>
