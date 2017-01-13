@@ -70,9 +70,10 @@
     <Content Include="DingDing-JS\869.js" />
     <Content Include="DingDing-JS\app.js" />
     <Content Include="DingDing-JS\BaseMsg\880.js" />
+    <Content Include="DingDing-JS\dbEntry\907.js" />
     <Content Include="DingDing-JS\ddWeb.chat\66.js" />
     <Content Include="DingDing-JS\ddWeb.chat\responsiveInput.html" />
-    <Content Include="DingDing-JS\ddWeb.conv\925.js" />
+    <Content Include="DingDing-JS\925.js" />
     <Content Include="DingDing-JS\ddWeb.conv\302.js" />
     <Content Include="DingDing-JS\ddWeb.conv\303.js" />
     <Content Include="DingDing-JS\ddWeb.conv\316.js" />

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DingDing", "Test_DingD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_RequireJS", "Test_RequireJS\Test_RequireJS.csproj", "{5922CCC7-40E9-4FF1-8BD5-FACDFB4201DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_SemanticUI", "Test_SemanticUI\Test_SemanticUI.csproj", "{087B2FC0-DA66-4EAC-91E8-C5C20842A7A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5922CCC7-40E9-4FF1-8BD5-FACDFB4201DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5922CCC7-40E9-4FF1-8BD5-FACDFB4201DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5922CCC7-40E9-4FF1-8BD5-FACDFB4201DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{087B2FC0-DA66-4EAC-91E8-C5C20842A7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087B2FC0-DA66-4EAC-91E8-C5C20842A7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087B2FC0-DA66-4EAC-91E8-C5C20842A7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087B2FC0-DA66-4EAC-91E8-C5C20842A7A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
