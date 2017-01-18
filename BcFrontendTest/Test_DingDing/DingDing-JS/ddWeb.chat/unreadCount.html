@@ -1,20 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
-
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title></title>
-		<meta charset="utf-8" />
-	</head>
-
-	<body>
-		<div ng-show="shouldShow">
-			<div ng-show="msg.senderMessageStatus.unReadCount > 0" log="chat_unread_user_click">
-				<a href="#" class="read-status unreadlist" ng-show="isSingleChat">{{ ::text.unread }}</a>
-				<a href="#" class="read-status unreadlist" ng-show="!isSingleChat">{{ msg.senderMessageStatus.unReadCount }}{{ ::text.groupUnread }}{{ state.isSingleChat }}</a>
-			</div>
-			<div ng-show="msg.senderMessageStatus.unReadCount === 0"> <span class="read-status all-read" ng-show="!isSingleChat">{{ ::text.allReaded }}</span> <span class="read-status all-read" ng-show="isSingleChat">{{ ::text.readed }}</span> </div>
-		</div>
-	</body>
-
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div ng-show="shouldShow">
+        <div ng-show="msg.senderMessageStatus.unReadCount > 0" log="chat_unread_user_click">
+            <a href="#" class="read-status unreadlist" ng-show="isSingleChat">{{ ::text.unread }}</a>
+            <a href="#" class="read-status unreadlist" ng-show="!isSingleChat">{{ msg.senderMessageStatus.unReadCount }}{{ ::text.groupUnread }}{{ state.isSingleChat }}</a>
+        </div>
+        <div ng-show="msg.senderMessageStatus.unReadCount === 0">
+            <span class="read-status all-read" ng-show="!isSingleChat">{{ ::text.allReaded }}</span>
+            <span class="read-status all-read" ng-show="isSingleChat">{{ ::text.readed }}</span>
+        </div>
+    </div>
+</body>
 </html>

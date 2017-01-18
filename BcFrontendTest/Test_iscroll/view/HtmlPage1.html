@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title></title>
+		<meta charset="utf-8" />
+		<script src="../build/iscroll.js">
+		</script>
+		<script type="text/javascript">
+			var myScroll;
+
+			function loaded() {
+				myScroll = new IScroll('#wrapper', {
+					scrollX: true,
+					freeScroll: true,
+					mouseWheel: true,
+					scrollbars: true,
+					keyBindings: true,
+					//disableMouse: true,
+					//disablePointer: true,
+					//scrollbars: true
+				});
+				console.dir(myScroll.options);
+			}
+		</script>
+		<style type="text/css">
+			/** {
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+			
+			html {
+				-ms-touch-action: none;
+			}*/
+			
+			/*body,
+			ul,
+			li {
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}*/
+			
+			body {
+				font-size: 1rem;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				overflow: hidden;
+			}
+			
+			#header {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 3rem;
+				line-height: 3rem;
+				background-color: dodgerblue;
+				padding: 0;
+				color: #EEEEEE;
+				font-size: 1.2rem;
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			#footer {
+				position: absolute;
+				z-index: 2;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 3rem;
+				line-height: 3rem;
+				background-color: #444444;
+				padding: 0;
+				font-size: 1.2rem;
+				text-align: center;
+				border-top: 1px solid #444444;
+			}
+			
+			#wrapper {
+				position: absolute;
+				z-index: 1;
+				top: 3rem;
+				bottom: 3rem;
+				left: 0;
+				width: 100%;
+				background-color: #CCCCCC;
+				overflow: hidden;
+			}
+			
+			#scroller {
+				position: absolute;
+				z-index: 1;
+				width: 2000px;
+				background-color: #FFFFFF;
+				/*-webkit-transform: rotate(-5deg);
+				-moz-transform: rotate(-5deg);
+				-ms-transform: rotate(-5deg);
+				-o-transform: rotate(-5deg);
+				transform: rotate(-5deg);*/
+				-webkit-transform: translateZ(2);
+				-moz-transform: translateZ(2);
+				-ms-transform: translateZ(2);
+				-o-transform: translateZ(2);
+				transform: translateZ(2);
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-o-text-size-adjust: none;
+				text-size-adjust: none;
+			}
+			
+			p {
+				font-size: 1rem;
+				padding: 1.2rem;
+				line-height: 200%;
+			}
+		</style>
+	</head>
+
+	<body onload="loaded()">
+		<div id="header">Top</div>
+
+		<div id="wrapper">
+			<div id="scroller">
+
+				<div class="article-detail">
+					<p class="text">今年1月12日，小米雷军在年会上公布2017年小目标：小米整体收入要破千亿元。雷布斯还说：“最坏的时候已经过去了。”所以，接下来必须放慢脚步、认真补课，而且早补要比晚补好，文火慢补要比急火猛药好。</p>
+					<p class="image"><img src="http://d.hiphotos.baidu.com/news/w%3D638/sign=018600f5e050352ab161260b6b42fb1a/00e93901213fb80e40996e953fd12f2eb9389423.jpg"></p>
+					<p class="text">为了突破小米的现状，雷军还提出几个大致方向。包括是以技术起家的高端市场，扩大产品销量，做好线下体验，人工智能，金融等。</p>
+					<p class="text">其实，在2015的时候，雷军就放话说，小米手机要实现8000万部到1亿部的出货量，销售额是1000亿到1200亿元。不过最终未能完成，从2015年开始，北派手机明显被南派Oppo、Vivo和华为所超越。</p>
+					<p class="text">这有点像有次GMIC大会上，姚劲波说我们不抱BAT大腿，我们自己就是大腿。然后一个月后就传来58同城和腾讯合作的消息。</p>
+					<p class="text">雷军说过去的2016年是小米的“补课元年”。在前几年的发展中，小米冲得太快，以提前透支了一部分成长性为代价，创造了现代商业史上的成长奇迹，就连小米起家的电商销售模式也遇到了挑战。</p>
+					<p class="text">电商目前只占社会零售总额10%，仅仅只做电商已经不够，虽然手机市场要好一些，但也只占到20%。因此小米要放慢脚步、认真补课，而且早补要比晚补好，文火慢补要比急火猛药好。</p>
+					<p class="text">那么，在过去的2016年，小米都有哪些战绩？</p>
+					<p class="text">小米5、小米5s、小米Note 2以及小米MIX，同时全球累计专利申请总量已突破1万6千项，授权总量已达3612项目，其中涉外专利授权量1767项。</p>
+					<p class="text">在过去的2016年，小米还是可以称为国产手机的电商之王，线下品牌零售旗舰店，至今已经开通54家。</p>
+					<p class="text">今年，小米计划再开200家店，在未来的三年内要开通1000家小米之家。涉及到海外的业务，10月份小米在印度的市场销售135万台手机，全年销售突破10亿美元，跻身印度手机市场前3名。小米手机周边的生态链系统全年收入过150亿元，连接了超过5000万台智能设备。</p>
+					<p class="text">2017年小米要怎么做?</p>
+					<p class="text">今年小米打算聚焦5大战略，分别是：黑科技、新零售、国际化、人工智能和互联网金融五大部分。“前三点小米在去年就已经全力投入，并取得了阶段性的出色成绩。”雷军认为，2017年小米将重点攻克人工智能和互联网金融。</p>
+					<p class="text">雷军回顾小米创业这7年说，小米消灭了山寨机，激活整个手机业界的品质提升，硬件生态链还提供了一系列世界级产品，提供了数百种优秀的产品，彻底改变了很多行业的面貌。</p>
+					<p class="text">其实小米从2015年开始增长就明显受限，因为中国手机市场已经完成了智能手机换功能手机的第一轮换机潮，第二换机潮是中高端替换低端品牌，小米从进攻者变成了防守者。</p>
+					<p class="text">同时，互联网渠道小米已经摸到了天花板，而在这个渠道中，学会了羊毛出在狗身上玩法的魅族、乐视、奇酷又不要命的搞低价，这让小米很难受。</p>
+					<p class="text">小米搞的多产品、多领域竞争能够带来销售额，但是毕竟手机这个东西价格太高，更换周期太短，小米搞的其他东西也有业绩不错的，但是，其他东西业绩上升替代不了手机的业绩下降，所以小米整体萎缩。</p>
+					<p class="text">小楼觉得，小米其实已经开始再走下坡路，这和小米最初的产品定位有直接关系，小米刚出道时就主打2000元以内的手机市场，这一步所谓：成也萧何，败萧何。</p>
+					<p class="text">在当时的环境与手机市场中，这一剂重击彻底搅乱了原本乱象丛生的国产手机行业。小米的上位之路亦由此开启，但好景不长，几年下来，随着用户消费能力的提升，很多用户已经不屑于再使用2000元以下的手机了。</p>
+					<p class="text">有位媒体圈的朋友曾和小楼说过：小米的用户如果能用得起iphone的话，会毫不犹豫把小米弃之如敝履。</p>
+					<p class="text">所谓成败萧何，是说小米最初就把自己的路走死了。不像华为可以分两个手机产品线同时运作，这样的用户区分是正确且长久不衰的。所以雷军说的小米今年目标破千亿，小楼是持保留意见的。</p>
+					<p class="text"><strong>以下为雷军内部讲话全文：</strong></p>
+					<p class="text">各位小米的同学们：</p>
+					<p class="text">大家新年好!</p>
+					<p class="text">刚刚过去的2016年，对所有小米人来说，正如习总书记在新年致辞中讲到的“是非凡的一年，也是难忘的一年”。</p>
+					<p class="text">2016年是小米的“补课元年”，我们主动降速调整，依然取得了一系列继往开来、影响深远的成果，其中最重要的有6项。</p>
+					<p class="text">一、坚持技术创新，突破手机高端市场</p>
+					<p class="text">小米是一家工程师文化主导的公司，“探索黑科技”是骨子里的追求。2016年，小米5在全球首发四轴光学防抖和3D陶瓷。小米5s在中国首发超感光相机，单位像素面积达到1.55um，还在全球首发无孔式超声波指纹。年底的小米Note2率先采用双曲面柔性屏，而小米MIX在全球首发全面屏和全陶瓷机身。</p>
+					<p class="text">我们在全球累计专利申请总量已突破1万6千项，授权总量已达3612项目，其中涉外专利授权量1767项。</p>
+					<p class="text">正是有这些持续的技术创新，我们才能突破并站稳高端手机市场。</p>
+					<p class="text">二、新零售高歌猛进</p>
+					<p class="text">2016年我们依然是手机电商之王，天猫“双十一”四连冠。我们还把小米之家升级为品牌零售旗舰店。至今已经开通54家，开一家火一家，其中上海大悦城店、北京五彩城店、郑州大卫城店年销售额破亿元。今年我们计划开200家店，未来三年计划开通1000家小米之家。</p>
+					<p class="text">三、国际化业务高速增长</p>
+					<p class="text">2016年，我们的国际业务取得突破性进展，10月印度市场销售135万台手机，全年销售突破10亿美元，成功跻身印度手机市场前三。</p>
+					<p class="text">四、以小米手机为核心的生态链整体崛起</p>
+					<p class="text">2016年，小米手机周边的生态链系统全年收入过150亿元，连接了超过5000万台智能设备。小米也成为全球最大的智能硬件孵化生态。</p>
+					<p class="text">五、互联网商业模式得到充分验证</p>
+					<p class="text">去年，我们的互联网收入实现了翻番，国际战场和生态链业务也大获成功，小米的商业模式已被充分验证。</p>
+					<p class="text">六、管理升级、效率提升</p>
+					<p class="text">以手机部为例，管理结构调整后，半年内团队规模翻番，进一步强化了产品研发、供应链和品质管理。与此同时，我们也在强化公司治理的信息化，以此为基础，全面推进精细化管理。</p>
+					<p class="text">尽管困难很多，我们依然取得了耀眼的成绩，感谢所有小米人的锐意进取和辛勤付出，感谢大家!</p>
+					<p class="text">最坏的时候已经过去了</p>
+					<p class="text">取得的成绩非凡，而经历的挑战则是难忘的。前几年我们冲得太快，创造了现代商业史上的成长奇迹，但也提前透支了一部分成长性。所以，我们必须放慢脚步、认真补课，而且早补要比晚补好，文火慢补要比急火猛药好。</p>
+					<p class="text">小米起家的电商销售模式也遇到了挑战。眼下只做电商已经不够，毕竟电商目前还只占社会零售总额10%，虽然手机市场要好一些，也才20%。小米是一家有雄心的公司，不安于只做一家不错的电商手机公司，所以要升级商业模式，要把纯线上模式升级到线上下融合的“新零售”。</p>
+					<p class="text">同时，我们去年遭遇了四个月缺货，手机供应链非常复杂，过去几年我们在这方面积累还是远远不够，再加上一些客观因素，这不是靠过去一年努力就能弥补的。不过，最坏的时候已经过去了。用技术创新和产品说话，我们去年比前年强大，今年肯定比去年更强大!</p>
+					<p class="text">五大核心战略和一个小目标</p>
+					<p class="text">2017年怎么干?“天上不会掉馅饼，撸起袖子加油干!”</p>
+					<p class="text">今年，我们要聚焦5大核心战略，分别是：黑科技、新零售、国际化、人工智能和互联网金融五大部分。</p>
+					<p class="text">前三点我们在去年就已经全力投入，并取得了阶段性的出色成绩，在这里我重点说说后两条。</p>
+					<p class="text">AlphaGo去年出人意料地轻松大胜顶尖棋士李世石，最近又套了个叫Master的马甲60连胜横扫全部人类高手。去年3月我就写过一篇文章，AlphaGo吹响了人工智能改变人类生活的号角，让所有人都看到了人工智能的广阔前景。</p>
+					<p class="text">去年小米人脸检测新算法在权威的FDDB人脸检测准确率榜上拿下第一。当人类信息以指数级别爆发增长时，我们需要有能深度学习的人工智能为我们提供有力协助，帮助我们让人类生活更加便捷轻松，这显然是我们的使命。</p>
+					<p class="text">在人工智能之外，金融也是我们今年要拉开阵势干的大事。2016年最后几天，我们家也开起了银行。新网银行成立，我们是第二大股东。除了这个大家都知道的新闻，我们其实已经组建起300多人的团队，在金融领域已经完成贷款、保险、证券、理财和支付等全领域布局，还拿到多种金融牌照。</p>
+					<p class="text">这对小米的未来有着至关重要的意义。将来，所有的商业巨头都是互联网公司，也都是金融公司，未来的金融都将建立在人工智能和大数据基础上。今天我们还是一家创业公司，但我们也一样有这样的雄心和能力。</p>
+					<p class="text">说起来还有点小激动。新年里，我们也“定个小目标”——2017年，小米整体收入破千亿元。</p>
+					<p class="text">比1000亿营收更重要的是价值观</p>
+					<p class="text">真诚和热爱就是小米价值观。真诚就是踏踏实实用真材实料做品质过硬、价格厚道的产品，和粉丝做朋友，用心倾听用户需求;热爱就是聚拢一批追求极致产品的兄弟姐妹，大家做自己喜欢的事情，咬定青山不放松、千难万险不回头，享受创业乐趣。</p>
+					<p class="text">这是小米之所以是小米的核心。如果不真诚，做事不厚道，再高明的忽悠也长久不了，用户总会看穿离你而去;如果不热爱，你肯定没法坚持创业长跑中孤独寂寞和玩命死磕中的痛苦，肯定做不出真正让人感动的产品。</p>
+					<p class="text">我们的愿景是让所有人都能享受科技的乐趣，如果自己都不能想享受这个过程，怎么可能让用户享受结果?</p>
+					<p class="text">其实，我们的真诚与热爱，已经深刻的改变了这个世界的一部分，深刻影响了几亿人的生活。</p>
+					<p class="text">回顾小米创业这7年，我们消灭了山寨机，激活整个手机业界的品质提升，硬件生态链还提供了一系列世界级产品，提供了数百种优秀的产品，彻底改变了很多行业的面貌。</p>
+					<p class="text">从小米诞生的第一天起，我们就怀着一颗成为伟大公司的梦想。相比追求利润，我相信追求产品体验更有前途。相比渠道层层加价，我相信真材实料定价厚道终究会更得人心。这注定是一条布满荆棘的荣誉之路，经得起磨难，受得了委屈，才能奔向我们梦想的星辰大海。</p>
+					<p class="text">感谢小米所有的兄弟姐妹，感谢你们过去以及将来将要做出的巨大付出。几十年后，我们每一个人都可以自豪地说，把青春与热血贡献给了，用科技改变人类生活方式的伟大事业。</p>
+					<p class="text">雷军</p>
+					<p class="text">2017.1.12</p>
+					<p class="image"><img src="http://g.hiphotos.baidu.com/news/w%3D638/sign=e1698360c1fcc3ceb4c0ca30aa44d6b7/0eb30f2442a7d9336eeceb31a44bd11373f0012f.jpg"></p>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="footer">Bottom</div>
+	</body>
+
+</html>
