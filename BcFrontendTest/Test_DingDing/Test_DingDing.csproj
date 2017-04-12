@@ -83,6 +83,7 @@
     <Content Include="DingDing-JS\ddWeb.conv\329.js" />
     <Content Include="DingDing-JS\ddWeb.service\488.js" />
     <Content Include="DingDing-JS\ddWeb.service\profileModal.html" />
+    <Content Include="DingDing-JS\ddWeb.faces_default\395.js" />
     <Content Include="DingDing-JS\lib\conversation\884.js" />
     <Content Include="DingDing-JS\ddWeb.directive\104.js" />
     <Content Include="DingDing-JS\ddWeb.directive\105.js" />
