@@ -1,0 +1,6 @@
+﻿<div class="msg-bubble" ng-class=\'{"msg-code-snippet": msg.isCodeSnippet }\'>
+    <pre ng-if="::!msg.isCodeSnippet" class="text" ng-bind-html="msg.content.textContent.text | msgfilter : msg.atOpenIds : msg.info.highlightKeyword">
+</pre>
+    <code-snippet-container ng-if="::msg.isCodeSnippet" is-line-wrap="1" on-render="msg.onCodeRender()" is-read-only="1" code-content="{{:: msg.content.textContent.text }}" code-language="{{ msg.codeLanguage }}">
+    </code-snippet-container>
+</div>

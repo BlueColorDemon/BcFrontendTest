@@ -72,6 +72,8 @@
     <Content Include="DingDing-JS\BaseMsg\880.js" />
     <Content Include="DingDing-JS\dbEntry\907.js" />
     <Content Include="DingDing-JS\ddWeb.chat\66.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\85.js" />
+    <Content Include="DingDing-JS\ddWeb.chat\msgText.html" />
     <Content Include="DingDing-JS\ddWeb.chat\responsiveInput.html" />
     <Content Include="DingDing-JS\925.js" />
     <Content Include="DingDing-JS\ddWeb.conv\302.js" />
@@ -81,9 +83,11 @@
     <Content Include="DingDing-JS\ddWeb.conv\324.js" />
     <Content Include="DingDing-JS\ddWeb.conv\325.js" />
     <Content Include="DingDing-JS\ddWeb.conv\329.js" />
+    <Content Include="DingDing-JS\ddWeb.emotion.EmotionManager\383.js" />
     <Content Include="DingDing-JS\ddWeb.service\488.js" />
     <Content Include="DingDing-JS\ddWeb.service\profileModal.html" />
     <Content Include="DingDing-JS\ddWeb.faces_default\395.js" />
+    <Content Include="DingDing-JS\filter\203.js" />
     <Content Include="DingDing-JS\lib\conversation\884.js" />
     <Content Include="DingDing-JS\ddWeb.directive\104.js" />
     <Content Include="DingDing-JS\ddWeb.directive\105.js" />
@@ -1309,7 +1313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DingDing-JS\angular.js\" />
-    <Folder Include="DingDing-JS\filter\" />
     <Folder Include="DingDing-JS\module\" />
     <Folder Include="DingDing-JS\path\" />
   </ItemGroup>
